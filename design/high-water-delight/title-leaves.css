@@ -1,0 +1,6 @@
+/* El fondo sólido conserva la legibilidad si no carga el motivo vegetal. */
+@supports (background-clip:text) or (-webkit-background-clip:text){
+  .status[data-beach-status="true"]{background-color:var(--ink);background-image:url('/map/title-leaves.svg');background-size:240px 160px;background-repeat:repeat;background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+  .status[data-beach-status="true"]::selection{background:#D8DCCE;color:var(--ink);-webkit-text-fill-color:var(--ink)}
+}
+@media(forced-colors:active){.status[data-beach-status="true"]{background:none;color:CanvasText;-webkit-text-fill-color:CanvasText}}

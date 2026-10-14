@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160">
+  <defs>
+    <path id="leaf" d="M0 0C-9-3-13-11-11-20C-2-18 5-9 0 0Z"/>
+    <path id="small-leaf" d="M0 0C-6-2-10-8-9-14C-2-14 3-6 0 0Z"/>
+  </defs>
+  <g fill="#789356" opacity=".10">
+    <use href="#leaf" transform="translate(25 34) rotate(-24)"/>
+    <use href="#leaf" transform="translate(75 73) rotate(32)"/>
+    <use href="#leaf" transform="translate(122 34) rotate(108)"/>
+    <use href="#leaf" transform="translate(185 65) rotate(-68)"/>
+    <use href="#leaf" transform="translate(37 123) rotate(57)"/>
+    <use href="#leaf" transform="translate(127 128) rotate(-30)"/>
+    <use href="#leaf" transform="translate(212 133) rotate(19)"/>
+  </g>
+  <g fill="#142C22" opacity=".14">
+    <use href="#small-leaf" transform="translate(49 50) rotate(61)"/>
+    <use href="#leaf" transform="translate(87 124) rotate(-54)"/>
+    <use href="#leaf" transform="translate(158 90) rotate(23)"/>
+    <use href="#small-leaf" transform="translate(220 41) rotate(98)"/>
+    <use href="#small-leaf" transform="translate(59 147) rotate(91)"/>
+    <use href="#small-leaf" transform="translate(165 147) rotate(-18)"/>
+  </g>
+  <g fill="#6B834C" opacity=".07">
+    <use href="#small-leaf" transform="translate(66 28) rotate(-62)"/>
+    <use href="#small-leaf" transform="translate(108 88) rotate(19)"/>
+    <use href="#small-leaf" transform="translate(174 24) rotate(73)"/>
+    <use href="#small-leaf" transform="translate(22 81) rotate(123)"/>
+    <use href="#small-leaf" transform="translate(222 102) rotate(-46)"/>
+  </g>
+</svg>

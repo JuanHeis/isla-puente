@@ -1,0 +1,200 @@
+{
+  "conclusion": "Ambas costas se reconstruyeron como un contorno conjunto, usando una transformación afín común de una misma referencia, con las islas aprobadas preservadas.",
+  "references": [
+    "referencia-alrededores.png",
+    "referencia-satelital-amplia.jpg (captura real de Google Maps por cua)",
+    "referencia-costa-urquiza.png y referencia-thompson-caleta.png para rasgos locales"
+  ],
+  "diagnosis": [
+    "V6 adelantaba la costa sudoeste: el giro antes de Parque Urquiza estaba cerca de (302,753), frente a (~266,848) del trazado común; el canal quedaba demasiado corto en ese tramo.",
+    "V6 comprimía la costa derecha para meter Thompson y la caleta dentro de 1122 px. La transformación coloca el borde de Thompson cerca de (1099,805) y el fondo de la caleta cerca de (1188,944).",
+    "El frente de Paraná al sur de Curupí queda aproximadamente en y=962..972. Con la silueta preservada del islote, la separación es del orden de 75–85 px; se conserva el canal corto.",
+    "La costa norte sigue la misma transformación: alrededor de x=988 está en y=264, y sólo entra por la derecha en el recorte antiguo. La vista desktop amplia permite entender ese corredor.",
+    "Las dos islas aprobadas no admiten una transformación exacta de la referencia. Ajustando siete anclas con una sola matriz, el error residual mayor es ~45 px al sur de Isla Puente y ~35 px en la punta este de Curupí. No se ocultó este error deformando las costas."
+  ],
+  "approximation": "Es un mapa ilustrado simplificado, no un relevamiento cartográfico. La caleta es una curva aproximada del rasgo marcado en la referencia; no se agregó detalle de muelles ni calles. Las prolongaciones de costa fuera de la referencia sólo mantienen la tangente general para cerrar los polígonos fuera del encuadre.",
+  "transformation": {
+    "x": "2.202600 x - 0.512012 y + 74.084683",
+    "y": "0.212637 x + 2.165770 y - 158.283405",
+    "sourceSize": [
+      640,
+      524
+    ],
+    "originalCanvas": [
+      1122,
+      1402
+    ]
+  },
+  "presentations": {
+    "desktop": {
+      "viewBox": [
+        -140,
+        180,
+        1550,
+        948
+      ],
+      "screenshot": "mapa-desktop.jpg"
+    },
+    "mobile": {
+      "viewBox": [
+        0,
+        350,
+        880,
+        820
+      ],
+      "screenshot": "mapa-mobile.jpg"
+    },
+    "comparison": "comparacion-costas.jpg",
+    "extended": {
+      "viewBox": [
+        -140,
+        -190,
+        1550,
+        1370
+      ],
+      "svg": "mapa-costa-extendido.svg"
+    }
+  },
+  "points": [
+    {
+      "name": "Santa Fe: tramo central",
+      "source": [
+        240,
+        72
+      ],
+      "target": [
+        566,
+        49
+      ]
+    },
+    {
+      "name": "Santa Fe: curva oriental",
+      "source": [
+        450,
+        151
+      ],
+      "target": [
+        988,
+        264
+      ]
+    },
+    {
+      "name": "Santa Fe: salida este",
+      "source": [
+        575,
+        188
+      ],
+      "target": [
+        1244,
+        371
+      ]
+    },
+    {
+      "name": "Paraná: entrada occidental",
+      "source": [
+        0,
+        347
+      ],
+      "target": [
+        -104,
+        593
+      ]
+    },
+    {
+      "name": "Paraná: diagonal sudoeste",
+      "source": [
+        121,
+        406
+      ],
+      "target": [
+        133,
+        747
+      ]
+    },
+    {
+      "name": "Paraná: inicio del giro",
+      "source": [
+        191,
+        446
+      ],
+      "target": [
+        266,
+        848
+      ]
+    },
+    {
+      "name": "Paraná: fin del giro",
+      "source": [
+        208,
+        467
+      ],
+      "target": [
+        293,
+        897
+      ]
+    },
+    {
+      "name": "Paraná: frente del Curupí",
+      "source": [
+        310,
+        487
+      ],
+      "target": [
+        508,
+        962
+      ]
+    },
+    {
+      "name": "Paraná: apertura oriental",
+      "source": [
+        435,
+        473
+      ],
+      "target": [
+        790,
+        959
+      ]
+    },
+    {
+      "name": "Paraná: subida hacia Thompson",
+      "source": [
+        504,
+        444
+      ],
+      "target": [
+        957,
+        910
+      ]
+    },
+    {
+      "name": "Thompson: playa mínima",
+      "source": [
+        556,
+        390
+      ],
+      "target": [
+        1099,
+        805
+      ]
+    },
+    {
+      "name": "Caleta: fondo aproximado",
+      "source": [
+        610,
+        449
+      ],
+      "target": [
+        1188,
+        944
+      ]
+    }
+  ],
+  "detailsRemoved": [
+    "Todas las calles inventadas y las cuadrículas.",
+    "Todos los rótulos cartográficos.",
+    "Los cierres de polígonos visibles en la primera captura ancha.",
+    "Acentos arena de las costas, salvo una franja mínima del Thompson."
+  ],
+  "editPrompt": "Usar mapa-costa.svg como autoridad geométrica completa. Conservar exactamente la posición y silueta de Isla Puente y Curupí y mantener la paleta del boceto v6. Sustituir juntas ambas costas por los contornos del SVG, derivados de una sola matriz: x'=2.202600x−0.512012y+74.084683; y'=0.212637x+2.165770y−158.283405 sobre referencia-alrededores.png de 640×524. No acercar ni alejar costas por separado para meter secundarios. El canal sudoeste debe seguir la diagonal hasta (~266,848), hacer el giro y continuar al frente de Curupí en y~962..972. La costa derecha asciende hacia Thompson en (~1099,805); la caleta queda cerca de (~1188,944), visible en desktop amplio y fuera en mobile. La costa norte sigue la misma curva y conserva el corredor ancho. Quitar calles y nombres. Sólo una franja arena mínima en Thompson; la arena protagonista de la isla depende del estado del río. Tipografía, estados y gráfico de la interfaz siguen siendo los aprobados. Desktop usa viewBox -140 180 1550 948; mobile usa 0 350 880 820, compartiendo idénticas formas.",
+  "verification": "Una captura amplia satelital, primera inspección del SVG, una corrección conjunta de cierres y contraste, confirmación desktop/mobile y captura de comparación. No se regeneró el raster."
+}

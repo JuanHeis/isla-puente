@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="map-north" viewBox="0 0 28 46" width="28" height="46" aria-hidden="true" focusable="false">
+  <text x="14" y="11" text-anchor="middle" fill="currentColor" font-family="Archivo, sans-serif" font-size="11" font-weight="650">N</text>
+  <g transform="rotate(12.8 14 31)" fill="currentColor">
+    <path d="M14 18 17.4 26 14 23.6 10.6 26Z" />
+    <path d="M14 23.6V40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" />
+  </g>
+</svg>

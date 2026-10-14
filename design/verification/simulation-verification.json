@@ -1,0 +1,62 @@
+{
+  "fiveBands": [
+    {
+      "chart": "3,47 m · 13 de oct de 2026, 12:00",
+      "expected": "Casi no hay playa",
+      "official": "Último registro: 3,47 m · 13 de oct de 2026, 12:00 · Paraná",
+      "overflow": false,
+      "sandVisible": true,
+      "shown": "Casi no hay playa",
+      "titleFits": true,
+      "value": "2,00"
+    },
+    {
+      "chart": "3,47 m · 13 de oct de 2026, 12:00",
+      "expected": "Hay poca playa",
+      "official": "Último registro: 3,47 m · 13 de oct de 2026, 12:00 · Paraná",
+      "overflow": false,
+      "sandVisible": true,
+      "shown": "Hay poca playa",
+      "titleFits": true,
+      "value": "1,70"
+    },
+    {
+      "chart": "3,47 m · 13 de oct de 2026, 12:00",
+      "expected": "Hay playa",
+      "official": "Último registro: 3,47 m · 13 de oct de 2026, 12:00 · Paraná",
+      "overflow": false,
+      "sandVisible": true,
+      "shown": "Hay playa",
+      "titleFits": true,
+      "value": "1,40"
+    },
+    {
+      "chart": "3,47 m · 13 de oct de 2026, 12:00",
+      "expected": "Hay mucha playa",
+      "official": "Último registro: 3,47 m · 13 de oct de 2026, 12:00 · Paraná",
+      "overflow": false,
+      "sandVisible": true,
+      "shown": "Hay mucha playa",
+      "titleFits": true,
+      "value": "0,90"
+    },
+    {
+      "chart": "3,47 m · 13 de oct de 2026, 12:00",
+      "expected": "No hay playa",
+      "official": "Último registro: 3,47 m · 13 de oct de 2026, 12:00 · Paraná",
+      "overflow": false,
+      "sandVisible": false,
+      "shown": "No hay playa",
+      "titleFits": true,
+      "value": "3,47"
+    }
+  ],
+  "emptyAndNaNPreserveLastValid": true,
+  "rangeKeyboardWorks": true,
+  "historicalSelectionKeepsSimulationAndOfficialRecord": true,
+  "returnRestoresLatestRealAndFocus": true,
+  "desktopAppWidth": 900,
+  "desktopMapHeight": 490,
+  "mobileNoOverflow": true,
+  "longMobileTitleFits": true
+}

@@ -1,0 +1,92 @@
+<g xmlns="http://www.w3.org/2000/svg" id="coast-main-roads" fill="none" stroke="#DFE2CF" stroke-linecap="round" stroke-linejoin="round">
+  <g id="real-roads-parana" clip-path="url(#clip-details-parana)">
+    <path id="road-estrada-329980718" d="M 175.3 880.4 L 139.9 816.5 L 82.4 750.9 L 33.1 710.9 L -42.7 677.0 L -115.1 616.5 L -145.7 605.6 L -187.5 575.9 L -231.2 562.6 L -330.6 544.7 L -360.0 546.4" stroke-width="4.2" opacity="0.52"/>
+    <path id="road-estrada-1073628801" d="M 188.2 917.0 L 177.8 887.0" stroke-width="4.2" opacity="0.52"/>
+    <path id="road-estrada-1073628802" d="M 177.8 887.0 L 176.4 883.7" stroke-width="4.2" opacity="0.52"/>
+    <path id="road-estrada-1313262116" d="M 176.4 883.7 L 175.3 880.4" stroke-width="4.2" opacity="0.52"/>
+    <path id="road-ramirez-oeste-256053276" d="M 19.4 918.7 L 32.8 878.2 L 86.8 820.1" stroke-width="3.0" opacity="0.48"/>
+    <path id="road-laurencena-28655524" d="M 290.7 901.9 L 260.6 869.8 L 247.0 866.5 L 227.9 876.7 L 221.3 900.1" stroke-width="4.2" opacity="0.52"/>
+    <path id="road-laurencena-192335724" d="M 290.7 901.9 L 342.5 938.8 L 396.7 955.4" stroke-width="4.2" opacity="0.52"/>
+    <path id="road-laurencena-331155687" d="M 722.0 1052.8 L 815.1 1108.0" stroke-width="4.2" opacity="0.52"/>
+    <path id="road-laurencena-331155691" d="M 716.7 1049.7 L 722.0 1052.8" stroke-width="4.2" opacity="0.52"/>
+    <path id="road-laurencena-370727527" d="M 650.7 1025.9 L 707.6 1043.9" stroke-width="4.2" opacity="0.52"/>
+    <path id="road-laurencena-370727530" d="M 638.6 1022.5 L 650.7 1025.9" stroke-width="4.2" opacity="0.52"/>
+    <path id="road-laurencena-370733181" d="M 598.9 1010.9 L 615.3 1015.7" stroke-width="4.2" opacity="0.52"/>
+    <path id="road-laurencena-370733182" d="M 615.3 1015.7 L 638.6 1022.5" stroke-width="4.2" opacity="0.52"/>
+    <path id="road-laurencena-370733391" d="M 396.7 955.4 L 419.5 963.9" stroke-width="4.2" opacity="0.52"/>
+    <path id="road-laurencena-370733392" d="M 420.3 964.3 L 454.8 981.6 L 524.7 993.3" stroke-width="4.2" opacity="0.52"/>
+    <path id="road-laurencena-370733918" d="M 562.3 1000.7 L 598.9 1010.9" stroke-width="4.2" opacity="0.52"/>
+    <path id="road-laurencena-654369235" d="M 419.5 963.9 L 420.3 964.3" stroke-width="4.2" opacity="0.52"/>
+    <path id="road-laurencena-1191541749" d="M 707.6 1043.9 L 716.7 1049.7" stroke-width="4.2" opacity="0.52"/>
+    <path id="road-laurencena-1223617158" d="M 815.1 1108.0 L 856.4 1131.6" stroke-width="4.2" opacity="0.52"/>
+    <path id="road-laurencena-1227047326" d="M 524.7 993.3 L 562.3 1000.7" stroke-width="4.2" opacity="0.52"/>
+    <path id="road-costanera-etchevehere-30121551" d="M 498.4 1020.5 L 488.7 1023.4" stroke-width="3.4" opacity="0.51"/>
+    <path id="road-costanera-etchevehere-370731733" d="M 502.4 1023.0 L 507.5 1026.6" stroke-width="3.4" opacity="0.51"/>
+    <path id="road-costanera-etchevehere-370731932" d="M 526.8 1029.7 L 545.5 1032.0 L 551.6 1046.2" stroke-width="3.4" opacity="0.51"/>
+    <path id="road-costanera-etchevehere-370732466" d="M 551.6 1046.2 L 560.7 1062.3" stroke-width="3.4" opacity="0.51"/>
+    <path id="road-costanera-etchevehere-815551745" d="M 515.4 1034.5 L 526.8 1029.7 L 516.6 1031.2" stroke-width="3.4" opacity="0.51"/>
+    <path id="road-costanera-etchevehere-815551747" d="M 516.6 1031.2 L 507.5 1026.6" stroke-width="3.4" opacity="0.51"/>
+    <path id="road-costanera-etchevehere-815551749" d="M 488.7 1023.4 L 461.1 1025.9 L 423.7 1011.7 L 385.6 1036.6" stroke-width="3.4" opacity="0.51"/>
+    <path id="road-costanera-etchevehere-815551751" d="M 491.7 1017.5 L 461.0 1012.1 L 459.4 998.4" stroke-width="3.4" opacity="0.51"/>
+    <path id="road-costanera-etchevehere-815551753" d="M 507.5 1026.6 L 515.4 1034.5" stroke-width="3.4" opacity="0.51"/>
+    <path id="road-costanera-etchevehere-1222840348" d="M 570.4 1059.5 L 560.7 1062.3" stroke-width="3.4" opacity="0.51"/>
+    <path id="road-costanera-etchevehere-1433771086" d="M 560.7 1062.3 L 570.4 1059.5" stroke-width="3.4" opacity="0.51"/>
+    <path id="road-alameda-30121508" d="M 375.6 1206.8 L 313.1 1094.2" stroke-width="3.4" opacity="0.51"/>
+    <path id="road-alameda-30121522" d="M 231.9 956.3 L 248.8 988.2" stroke-width="3.4" opacity="0.51"/>
+    <path id="road-alameda-79361112" d="M 234.7 944.5 L 226.3 936.2 L 227.4 947.5" stroke-width="3.4" opacity="0.51"/>
+    <path id="road-alameda-221397819" d="M 313.1 1094.2 L 286.9 1050.4" stroke-width="3.4" opacity="0.51"/>
+    <path id="road-alameda-221397820" d="M 286.9 1050.4 L 256.9 993.3" stroke-width="3.4" opacity="0.51"/>
+    <path id="road-alameda-1313262123" d="M 397.4 1245.1 L 375.6 1206.8" stroke-width="3.4" opacity="0.51"/>
+    <path id="road-bertozzi-30121546" d="M 253.4 994.7 L 217.5 1062.2" stroke-width="3.0" opacity="0.48"/>
+    <path id="road-bertozzi-1222840352" d="M 208.5 1074.4 L 185.0 1103.7" stroke-width="3.0" opacity="0.48"/>
+    <path id="road-bertozzi-1222840353" d="M 217.5 1062.2 L 208.5 1074.4" stroke-width="3.0" opacity="0.48"/>
+    <path id="road-nux-30121534" d="M 217.5 1062.2 L 156.9 1034.2" stroke-width="3.0" opacity="0.48"/>
+    <path id="road-nux-1222840351" d="M 264.5 1084.5 L 217.5 1062.2" stroke-width="3.0" opacity="0.48"/>
+    <path id="road-catamarca-32866480" d="M 152.3 1270.0 L 191.4 1205.9" stroke-width="3.0" opacity="0.48"/>
+    <path id="road-catamarca-1222840354" d="M 247.0 1115.7 L 286.9 1050.4" stroke-width="3.0" opacity="0.48"/>
+    <path id="road-catamarca-1222840356" d="M 191.4 1205.9 L 247.0 1115.7" stroke-width="3.0" opacity="0.48"/>
+    <path id="road-malvinas-146300806" d="M 327.3 1070.6 L 429.4 1115.7" stroke-width="3.0" opacity="0.47"/>
+    <path id="road-malvinas-1313118421" d="M 429.4 1115.7 L 500.8 1142.5" stroke-width="3.0" opacity="0.47"/>
+    <path id="road-liniers-rioja-201707463" d="M 779.1 1030.8 L 779.3 1025.7" stroke-width="3.0" opacity="0.48"/>
+    <path id="road-liniers-rioja-201707464" d="M 782.1 1033.9 L 789.5 1061.6 L 774.4 1083.9" stroke-width="3.0" opacity="0.48"/>
+    <path id="road-liniers-rioja-1253574045" d="M 779.3 1025.7 L 767.4 994.4" stroke-width="3.0" opacity="0.48"/>
+    <path id="road-liniers-rioja-1307610277" d="M 779.1 1030.8 L 782.1 1033.9" stroke-width="3.0" opacity="0.48"/>
+    <path id="road-liniers-rioja-1307610278" d="M 724.6 1019.5 L 779.1 1030.8" stroke-width="3.0" opacity="0.48"/>
+    <path id="road-ramirez-este-195828491" d="M 805.1 1270.0 L 815.1 1245.1" stroke-width="4.0" opacity="0.51"/>
+    <path id="road-ramirez-este-195828494" d="M 833.2 1202.4 L 861.2 1136.0" stroke-width="4.0" opacity="0.51"/>
+    <path id="road-ramirez-este-197281871" d="M 815.1 1245.1 L 833.2 1202.4" stroke-width="4.0" opacity="0.51"/>
+    <path id="road-ramirez-este-297810539" d="M 875.3 1092.9 L 859.3 1132.5" stroke-width="4.0" opacity="0.51"/>
+    <path id="road-ramirez-este-329981350" d="M 893.2 1058.1 L 924.3 984.6" stroke-width="4.0" opacity="0.51"/>
+    <path id="road-ramirez-este-654369240" d="M 862.3 1133.8 L 878.1 1095.2" stroke-width="4.0" opacity="0.51"/>
+    <path id="road-ramirez-este-1191541752" d="M 921.1 983.8 L 888.7 1058.1" stroke-width="4.0" opacity="0.51"/>
+    <path id="road-ramirez-este-1192754233" d="M 878.1 1095.2 L 893.2 1058.1" stroke-width="4.0" opacity="0.51"/>
+    <path id="road-ramirez-este-1223617159" d="M 859.3 1132.5 L 858.5 1134.7" stroke-width="4.0" opacity="0.51"/>
+    <path id="road-ramirez-este-1226701532" d="M 924.3 984.6 L 930.8 974.8" stroke-width="4.0" opacity="0.51"/>
+    <path id="road-ramirez-este-1227047329" d="M 888.7 1058.1 L 875.3 1092.9" stroke-width="4.0" opacity="0.51"/>
+    <path id="road-ramirez-este-1227047339" d="M 929.1 972.7 L 921.1 983.8" stroke-width="4.0" opacity="0.51"/>
+    <path id="road-du-graty-30931624" d="M 1073.4 976.7 L 1038.3 991.4 L 994.5 999.9" stroke-width="3.0" opacity="0.48"/>
+    <path id="road-du-graty-30931638" d="M 921.1 983.8 L 843.4 974.5" stroke-width="3.0" opacity="0.48"/>
+    <path id="road-du-graty-1227047338" d="M 924.3 984.6 L 921.1 983.8" stroke-width="3.0" opacity="0.48"/>
+    <path id="road-du-graty-1254259969" d="M 1075.1 975.4 L 1073.4 976.7" stroke-width="3.0" opacity="0.48"/>
+    <path id="road-du-graty-1313115331" d="M 994.5 999.9 L 924.3 984.6" stroke-width="3.0" opacity="0.48"/>
+    <path id="road-ambrosetti-30931648" d="M 1013.8 1085.1 L 1504.6 1194.2" stroke-width="3.2" opacity="0.49"/>
+    <path id="road-ambrosetti-1191541753" d="M 856.9 1050.1 L 888.7 1058.1" stroke-width="3.2" opacity="0.49"/>
+    <path id="road-ambrosetti-1226701527" d="M 888.7 1058.1 L 963.6 1074.0" stroke-width="3.2" opacity="0.49"/>
+    <path id="road-ambrosetti-1226701528" d="M 997.0 1081.6 L 1013.8 1085.1" stroke-width="3.2" opacity="0.49"/>
+    <path id="road-ambrosetti-1313115329" d="M 963.6 1074.0 L 997.0 1081.6" stroke-width="3.2" opacity="0.49"/>
+    <path id="road-ruta-168-338560996" d="M 1269.2 856.5 L 1272.3 813.7" stroke-width="3.5" opacity="0.46"/>
+    <path id="road-ruta-168-444436875" d="M 1256.9 888.9 L 1269.2 856.5" stroke-width="3.5" opacity="0.46"/>
+    <path id="road-junction-30121513" d="M 248.3 991.0 L 249.9 993.8 L 254.6 994.4 L 258.1 992.0 L 259.3 987.5 L 256.9 984.7 L 252.9 984.6 L 249.8 986.6 L 248.3 991.0" stroke-width="3.4" opacity="0.51"/>
+    <path id="road-junction-30121520" d="M 231.9 956.3 L 236.2 954.3 L 238.5 950.6 L 237.6 946.2 L 234.7 944.5 L 230.0 945.3 L 226.3 949.7 L 226.7 953.9 L 230.0 956.2" stroke-width="3.4" opacity="0.51"/>
+    <path id="road-junction-1313262118" d="M 230.0 956.2 L 231.9 956.3" stroke-width="3.4" opacity="0.51"/>
+  </g>
+  <g id="real-roads-santa-fe" clip-path="url(#clip-details-santa-fe)">
+    <path id="road-ruta-168-131703114" d="M 802.3 -16.9 L 291.2 -86.5 L 233.8 -103.3 L 182.6 -129.6" stroke-width="3.5" opacity="0.46"/>
+    <path id="road-ruta-168-131703115" d="M 1231.3 12.8 L 1262.0 19.2 L 1288.4 35.1 L 1307.0 56.9 L 1316.5 84.1" stroke-width="3.5" opacity="0.46"/>
+    <path id="road-ruta-168-338560997" d="M 1316.5 84.1 L 1316.9 136.9" stroke-width="3.5" opacity="0.46"/>
+    <path id="road-ruta-168-411778435" d="M 836.7 -12.2 L 802.3 -16.9" stroke-width="3.5" opacity="0.46"/>
+    <path id="road-ruta-168-411778442" d="M 1166.1 7.4 L 929.5 -0.8 L 836.7 -12.2" stroke-width="3.5" opacity="0.46"/>
+    <path id="road-ruta-168-879949429" d="M 1171.2 7.6 L 1166.1 7.4" stroke-width="3.5" opacity="0.46"/>
+    <path id="road-ruta-168-879949430" d="M 1231.3 12.8 L 1171.2 7.6" stroke-width="3.5" opacity="0.46"/>
+  </g>
+</g>

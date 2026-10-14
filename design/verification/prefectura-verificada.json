@@ -1,0 +1,250 @@
+{
+  "current": {
+    "timestamp": 1791903600000,
+    "level": 3.47
+  },
+  "history": [
+    {
+      "timestamp": 1789354800000,
+      "level": 2.48
+    },
+    {
+      "timestamp": 1789398000000,
+      "level": 2.47
+    },
+    {
+      "timestamp": 1789441200000,
+      "level": 2.46
+    },
+    {
+      "timestamp": 1789484400000,
+      "level": 2.46
+    },
+    {
+      "timestamp": 1789527600000,
+      "level": 2.45
+    },
+    {
+      "timestamp": 1789570800000,
+      "level": 2.44
+    },
+    {
+      "timestamp": 1789614000000,
+      "level": 2.44
+    },
+    {
+      "timestamp": 1789657200000,
+      "level": 2.45
+    },
+    {
+      "timestamp": 1789700400000,
+      "level": 2.47
+    },
+    {
+      "timestamp": 1789743600000,
+      "level": 2.5
+    },
+    {
+      "timestamp": 1789786800000,
+      "level": 2.53
+    },
+    {
+      "timestamp": 1789830000000,
+      "level": 2.57
+    },
+    {
+      "timestamp": 1789873200000,
+      "level": 2.61
+    },
+    {
+      "timestamp": 1789916400000,
+      "level": 2.64
+    },
+    {
+      "timestamp": 1789959600000,
+      "level": 2.68
+    },
+    {
+      "timestamp": 1790002800000,
+      "level": 2.7
+    },
+    {
+      "timestamp": 1790046000000,
+      "level": 2.74
+    },
+    {
+      "timestamp": 1790089200000,
+      "level": 2.77
+    },
+    {
+      "timestamp": 1790132400000,
+      "level": 2.81
+    },
+    {
+      "timestamp": 1790175600000,
+      "level": 2.84
+    },
+    {
+      "timestamp": 1790218800000,
+      "level": 2.86
+    },
+    {
+      "timestamp": 1790265600000,
+      "level": 2.9
+    },
+    {
+      "timestamp": 1790305200000,
+      "level": 2.94
+    },
+    {
+      "timestamp": 1790348400000,
+      "level": 2.98
+    },
+    {
+      "timestamp": 1790391600000,
+      "level": 3
+    },
+    {
+      "timestamp": 1790434800000,
+      "level": 3.02
+    },
+    {
+      "timestamp": 1790478000000,
+      "level": 3.06
+    },
+    {
+      "timestamp": 1790521200000,
+      "level": 3.08
+    },
+    {
+      "timestamp": 1790564400000,
+      "level": 3.12
+    },
+    {
+      "timestamp": 1790607600000,
+      "level": 3.13
+    },
+    {
+      "timestamp": 1790650800000,
+      "level": 3.17
+    },
+    {
+      "timestamp": 1790694000000,
+      "level": 3.2
+    },
+    {
+      "timestamp": 1790737200000,
+      "level": 3.22
+    },
+    {
+      "timestamp": 1790780400000,
+      "level": 3.24
+    },
+    {
+      "timestamp": 1790823600000,
+      "level": 3.25
+    },
+    {
+      "timestamp": 1790866800000,
+      "level": 3.26
+    },
+    {
+      "timestamp": 1790910000000,
+      "level": 3.27
+    },
+    {
+      "timestamp": 1790953200000,
+      "level": 3.27
+    },
+    {
+      "timestamp": 1790996400000,
+      "level": 3.28
+    },
+    {
+      "timestamp": 1791039600000,
+      "level": 3.29
+    },
+    {
+      "timestamp": 1791082800000,
+      "level": 3.3
+    },
+    {
+      "timestamp": 1791126000000,
+      "level": 3.3
+    },
+    {
+      "timestamp": 1791169200000,
+      "level": 3.3
+    },
+    {
+      "timestamp": 1791212400000,
+      "level": 3.3
+    },
+    {
+      "timestamp": 1791255600000,
+      "level": 3.3
+    },
+    {
+      "timestamp": 1791298800000,
+      "level": 3.25
+    },
+    {
+      "timestamp": 1791342000000,
+      "level": 3.31
+    },
+    {
+      "timestamp": 1791385200000,
+      "level": 3.3
+    },
+    {
+      "timestamp": 1791428400000,
+      "level": 3.3
+    },
+    {
+      "timestamp": 1791471600000,
+      "level": 3.31
+    },
+    {
+      "timestamp": 1791514800000,
+      "level": 3.32
+    },
+    {
+      "timestamp": 1791558000000,
+      "level": 3.33
+    },
+    {
+      "timestamp": 1791601200000,
+      "level": 3.34
+    },
+    {
+      "timestamp": 1791644400000,
+      "level": 3.35
+    },
+    {
+      "timestamp": 1791687600000,
+      "level": 3.37
+    },
+    {
+      "timestamp": 1791730800000,
+      "level": 3.39
+    },
+    {
+      "timestamp": 1791774000000,
+      "level": 3.41
+    },
+    {
+      "timestamp": 1791817200000,
+      "level": 3.43
+    },
+    {
+      "timestamp": 1791860400000,
+      "level": 3.45
+    },
+    {
+      "timestamp": 1791903600000,
+      "level": 3.47
+    }
+  ],
+  "fetchedAt": 1791935400400,
+  "error": null
+}

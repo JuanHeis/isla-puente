@@ -1,0 +1,30 @@
+--- a/src/components/river-app.tsx
++++ b/src/components/river-app.tsx
+@@
+ import { RiverChart } from "./river-chart";
++import { RiverSimulator } from "./river-simulator";
+@@
+   const [now, setNow] = useState<number | null>(null);
++  const [simulatedLevel, setSimulatedLevel] = useState<number | null>(null);
+@@
+   const current = report.current;
++  const displayedLevel = simulatedLevel ?? current?.level ?? null;
+   const old = current && now !== null && now - current.timestamp > OLD_READING_MS;
+@@
+-    <h1 className="status" aria-live="polite">{current ? beachState(current.level) : "Sin dato actual"}</h1>
+-    <p className="current-reading">{current
+-      ? <><strong>{formatLevel(current.level)}</strong><span aria-hidden="true"> · </span><time dateTime={new Date(current.timestamp).toISOString()}>{formatDate(current.timestamp)}</time><span className="reading-origin"> · Paraná</span></>
+-      : "Consultamos la altura del río en Paraná."}</p>
+-    <IslandMap level={current?.level ?? null} />
++    <h1 className="status" aria-live="polite">{displayedLevel !== null ? beachState(displayedLevel) : "Sin dato actual"}</h1>
++    <p className="current-reading">{simulatedLevel !== null
++      ? <><span className="simulation-indicator">SIMULACIÓN</span><strong>{formatLevel(simulatedLevel)}</strong>
++        <span className="simulation-official">Último registro: {current
++          ? <>{formatLevel(current.level)}<span aria-hidden="true"> · </span><time dateTime={new Date(current.timestamp).toISOString()}>{formatDate(current.timestamp)}</time><span className="reading-origin"> · Paraná</span></>
++          : "sin dato actual."}</span></>
++      : current
++        ? <><strong>{formatLevel(current.level)}</strong><span aria-hidden="true"> · </span><time dateTime={new Date(current.timestamp).toISOString()}>{formatDate(current.timestamp)}</time><span className="reading-origin"> · Paraná</span></>
++        : "Consultamos la altura del río en Paraná."}</p>
++    <IslandMap level={displayedLevel} />
+     <RiverChart readings={report.history} />
++    <RiverSimulator level={simulatedLevel} realLevel={current?.level ?? null} onLevelChange={setSimulatedLevel} />

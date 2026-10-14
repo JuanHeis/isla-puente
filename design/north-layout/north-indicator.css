@@ -1,0 +1,17 @@
+.map-north {
+  position: absolute;
+  left: clamp(22px, 4.6vw, 76px);
+  top: 56px;
+  display: block;
+  width: 28px;
+  height: 46px;
+  color: #52614F;
+  opacity: .6;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+@media (max-width: 640px) {
+  .map-north { top: 40px; }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "isla-puente",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 59957",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1 --port 59957",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.ts"
+  },
+  "dependencies": {
+    "next": "16.4.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "7.0.2"
+  },
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  }
+}

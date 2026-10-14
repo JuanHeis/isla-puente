@@ -1,0 +1,6 @@
+<g id="shore-water-transition" mask="url(#shore-water-only)" filter="url(#shore-water-soften)" fill="none" stroke="url(#shore-water-tint)" stroke-linejoin="round">
+  <use href="#costa-santa-fe" stroke-width="19" opacity=".24"/>
+  <use href="#costa-parana" stroke-width="19" opacity=".24"/>
+  <use href="#isla-puente" stroke-width="27" opacity=".28"/>
+  <use href="#islote-curupi" stroke-width="23" opacity=".28"/>
+</g>

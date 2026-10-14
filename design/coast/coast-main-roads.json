@@ -1,0 +1,418 @@
+{
+  "sourceReferences": [
+    "referencia-alrededores.png (640×524)",
+    "coast-review/referencia-satelital-amplia.jpg (1280×720)"
+  ],
+  "publicPrimaryEvidence": {
+    "source": "OpenStreetMap, datos de ejes viales consultados por Overpass",
+    "links": [
+      "https://www.openstreetmap.org/way/329980718",
+      "https://www.openstreetmap.org/way/1073628801",
+      "https://www.openstreetmap.org/way/192335724",
+      "https://www.openstreetmap.org/way/28655524"
+    ],
+    "checked": "Los nombres y el carácter interior de Laurencena se verificaron en tags/geometry de esos ways. Las coordenadas de dibujo se leen manualmente de las referencias, no de una proyección GPS exacta."
+  },
+  "transform": {
+    "mx": [
+      2.2026001411471934,
+      -0.5120120838736104,
+      74.0846828735353
+    ],
+    "my": [
+      0.21263675313548153,
+      2.1657695752583397,
+      -158.28340491181686
+    ],
+    "coordinateSpace": "Mismo espacio mundo del SVG costero aprobado"
+  },
+  "axes": 4,
+  "drawnSegments": 5,
+  "lines": [
+    {
+      "id": "main-estrada",
+      "axis": "Estrada / tramo costero occidental",
+      "clip": "parana",
+      "width": 4,
+      "opacity": 0.48,
+      "source": [
+        [
+          0,
+          359
+        ],
+        [
+          32,
+          375
+        ],
+        [
+          74,
+          395
+        ],
+        [
+          111,
+          419
+        ],
+        [
+          143,
+          440
+        ]
+      ],
+      "evidence": [
+        "Tramo diagonal junto a la costa occidental visible en ambas referencias.",
+        "OSM way 329980718 y 1073628801: Avenida José Manuel de Estrada."
+      ],
+      "world": [
+        [
+          -109.7,
+          619.2
+        ],
+        [
+          -47.4,
+          660.7
+        ],
+        [
+          34.8,
+          712.9
+        ],
+        [
+          104,
+          772.8
+        ],
+        [
+          163.8,
+          825.1
+        ]
+      ],
+      "path": "M -109.7 619.2 L -47.4 660.7 L 34.8 712.9 L 104 772.8 L 163.8 825.1"
+    },
+    {
+      "id": "main-laurencena",
+      "axis": "Laurencena / eje interior",
+      "clip": "parana",
+      "width": 3.5,
+      "opacity": 0.44,
+      "source": [
+        [
+          -60,
+          424
+        ],
+        [
+          -30,
+          443
+        ],
+        [
+          -5,
+          477
+        ],
+        [
+          24,
+          493
+        ],
+        [
+          55,
+          505
+        ],
+        [
+          101,
+          518
+        ],
+        [
+          170,
+          530
+        ],
+        [
+          240,
+          547
+        ]
+      ],
+      "evidence": [
+        "Captura amplia: rótulo Av. Laurencena sobre el eje interior al oeste de Parque Urquiza; desciende hacia el tejido urbano.",
+        "Ways OSM 28655524, 192335724 y 370733391–370733392 confirman el corredor Laurencena y sus cambios de dirección."
+      ],
+      "world": [
+        [
+          -275.2,
+          747.2
+        ],
+        [
+          -218.8,
+          794.8
+        ],
+        [
+          -181.2,
+          873.7
+        ],
+        [
+          -125.5,
+          914.5
+        ],
+        [
+          -63.3,
+          947.1
+        ],
+        [
+          31.3,
+          985.1
+        ],
+        [
+          177.2,
+          1025.7
+        ],
+        [
+          322.6,
+          1077.4
+        ]
+      ],
+      "path": "M -275.2 747.2 L -218.8 794.8 L -181.2 873.7 L -125.5 914.5 L -63.3 947.1 L 31.3 985.1 L 177.2 1025.7 L 322.6 1077.4"
+    },
+    {
+      "id": "main-costanera-central",
+      "axis": "Continuación de la costanera",
+      "clip": "parana",
+      "width": 4,
+      "opacity": 0.46,
+      "source": [
+        [
+          209,
+          486
+        ],
+        [
+          252,
+          497
+        ],
+        [
+          303,
+          503
+        ],
+        [
+          355,
+          504
+        ],
+        [
+          398,
+          498
+        ],
+        [
+          438,
+          484
+        ],
+        [
+          478,
+          466
+        ],
+        [
+          516,
+          443
+        ],
+        [
+          548,
+          422
+        ]
+      ],
+      "evidence": [
+        "Eje visible junto al frente de Paraná, al sur de Curupí y hacia Puerto Sánchez/Thompson.",
+        "El plateau central y los tramos diagonales del este se conservaron como segmentos; no se le asignó un nombre vial que no fuera verificable."
+      ],
+      "world": [
+        [
+          285.6,
+          938.7
+        ],
+        [
+          374.7,
+          971.7
+        ],
+        [
+          483.9,
+          995.5
+        ],
+        [
+          598,
+          1008.8
+        ],
+        [
+          695.7,
+          1004.9
+        ],
+        [
+          791,
+          983.1
+        ],
+        [
+          888.3,
+          952.6
+        ],
+        [
+          983.8,
+          910.9
+        ],
+        [
+          1065,
+          872.2
+        ]
+      ],
+      "path": "M 285.6 938.7 L 374.7 971.7 L 483.9 995.5 L 598 1008.8 L 695.7 1004.9 L 791 983.1 L 888.3 952.6 L 983.8 910.9 L 1065 872.2"
+    },
+    {
+      "id": "main-acceso-168-parana",
+      "axis": "Acceso oriental / RN168",
+      "clip": "parana",
+      "width": 3.5,
+      "opacity": 0.42,
+      "source": [
+        [
+          625,
+          335
+        ],
+        [
+          628,
+          383
+        ],
+        [
+          634,
+          435
+        ],
+        [
+          638,
+          481
+        ],
+        [
+          640,
+          535
+        ]
+      ],
+      "evidence": [
+        "La captura amplia identifica RN168 al este de Thompson, con un eje casi vertical; la referencia640 muestra ese acceso en el borde derecho."
+      ],
+      "world": [
+        [
+          1279.2,
+          700.1
+        ],
+        [
+          1261.2,
+          804.7
+        ],
+        [
+          1247.8,
+          918.6
+        ],
+        [
+          1233.1,
+          1019.1
+        ],
+        [
+          1209.8,
+          1136.5
+        ]
+      ],
+      "path": "M 1279.2 700.1 L 1261.2 804.7 L 1247.8 918.6 L 1233.1 1019.1 L 1209.8 1136.5"
+    },
+    {
+      "id": "main-acceso-168-norte",
+      "axis": "Acceso oriental / RN168",
+      "clip": "santa-fe",
+      "width": 3.5,
+      "opacity": 0.42,
+      "source": [
+        [
+          0,
+          4
+        ],
+        [
+          178,
+          19
+        ],
+        [
+          351,
+          17
+        ],
+        [
+          486,
+          17
+        ],
+        [
+          520,
+          23
+        ],
+        [
+          541,
+          40
+        ],
+        [
+          552,
+          66
+        ],
+        [
+          554,
+          92
+        ],
+        [
+          568,
+          119
+        ],
+        [
+          587,
+          144
+        ]
+      ],
+      "evidence": [
+        "Vía norte horizontal y curva hacia el acceso oriental visibles en la referencia640.",
+        "La captura amplia muestra los escudos 168 y la conexión hacia el túnel."
+      ],
+      "world": [
+        [
+          72,
+          -149.6
+        ],
+        [
+          456.4,
+          -79.3
+        ],
+        [
+          838.5,
+          -46.8
+        ],
+        [
+          1135.8,
+          -18.1
+        ],
+        [
+          1207.7,
+          2.1
+        ],
+        [
+          1245.2,
+          43.4
+        ],
+        [
+          1256.1,
+          102
+        ],
+        [
+          1247.2,
+          158.8
+        ],
+        [
+          1264.2,
+          220.2
+        ],
+        [
+          1293.3,
+          278.4
+        ]
+      ],
+      "path": "M 72 -149.6 L 456.4 -79.3 L 838.5 -46.8 L 1135.8 -18.1 L 1207.7 2.1 L 1245.2 43.4 L 1256.1 102 L 1247.2 158.8 L 1264.2 220.2 L 1293.3 278.4"
+    }
+  ],
+  "integration": "Reemplazar todos los grupos de calles anteriores por este <g>; conservar los parques ya existentes y los clipPaths #clip-details-parana/#clip-details-santa-fe. Sin defs ni ids de clips nuevos.",
+  "simplification": [
+    "Se elimina el bucle de parque y las conexiones genéricas.",
+    "Se conservan sólo cuatro ejes. RN168 se dibuja como dos tramos recortados por tierra, sin línea sobre el río.",
+    "Los cambios de dirección se representan con L; no hay suavizado Catmull-Rom ni curvas inventadas.",
+    "Laurencena se sitúa tierra adentro y parte de su recorrido queda fuera del encuadre original de 640×524, siguiendo la captura amplia; esos extremos son aproximados.",
+    "El eje costero central conserva la meseta al sur de Curupí y la diagonal hacia el este."
+  ],
+  "limits": "Ejes ilustrados aproximados leídos a escala de la imagen. OSM se usó para reconocer vías, no para afirmar exactitud métrica del dibujo. No hay calles secundarias, grilla, nombres visibles, iconos ni cambios en costa/islas/parques.",
+  "screenshots": "No se tomaron capturas nuevas; la única revisión integrada desktop/mobile la hace el padre."
+}

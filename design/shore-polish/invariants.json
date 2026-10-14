@@ -1,0 +1,31 @@
+{
+  "fourBasePathsUnchanged": true,
+  "roadsUnchanged": 382,
+  "markerUnchanged": true,
+  "beachUnchanged": true,
+  "noBlur": true,
+  "stats": {
+    "isla-puente": {
+      "points": 487,
+      "canopyProjectionRange": [
+        -0.85,
+        4.34
+      ],
+      "visibleWaterWidthRange": [
+        8.1,
+        11.88
+      ]
+    },
+    "islote-curupi": {
+      "points": 180,
+      "canopyProjectionRange": [
+        -0.64,
+        3.94
+      ],
+      "visibleWaterWidthRange": [
+        7.4,
+        10.71
+      ]
+    }
+  }
+}

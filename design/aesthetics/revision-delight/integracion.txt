@@ -1,0 +1,42 @@
+ISLA PUENTE — IMPECCABLE DELIGHT
+
+TESIS
+Reconocer el monte y la orilla del Paraná como un paisaje vivo y cuidado, manteniendo inmediata la lectura de si hay playa.
+
+CAMBIO PERCEPTUAL
+El monte termina en masas redondeadas de copas que comparten la textura del interior. No son iconitos aislados ni un contorno liso con una línea exterior. La máscara vegetal sale unos pocos píxeles del contorno y forma entrantes locales pequeños, sin modificar ninguno de los paths geográficos.
+El agua clara pasa a ser una zona de forma y ancho variables; se debe percibir en vista general y en móvil, además del detalle de Curupí. Se conserva el río terroso y la diferencia clara entre agua y arena.
+
+ALCANCE
+Sólo monte de Puente/Curupí, agua junto a las cuatro orillas y ondas actuales. NO contiene patrón, árboles, parques ni lapachos de tierra firme. Esa intervención pertenece a roads_revision y su patch debe conservarse.
+
+INTEGRACIÓN FUSIONABLE
+Ejecutar: node apply-layer.cjs INPUT.svg OUTPUT.svg
+El helper lee delight-layers.json; no usa mapa-propuesto.svg como fuente de vías. Trabaja sobre el SVG actual y conserva todos sus tramos de calles y todo el contenido no perteneciente a la revisión estética anterior.
+Luego sincronizar public/map/isla-puente.svg y approvedMap de map-art.ts con el resultado, manteniendo el marcador de arena existente.
+No aplicar dos veces sobre un SVG que ya tenga vegetation-isla-puente/vegetation-islote-curupi; si hubiera una corrección, usar la fuente previa guardada por la integración.
+
+MODIFICACIONES EXACTAS
+- Retira los defs anteriores shore-water-soften, shore-water-only, shore-water-tint y leaf-edge-a/b.
+- Sustituye shore-water-transition por las zonas nativas de agua; conserva river-ripples y sus siete gestos.
+- Retira island-edge-leaves, los 24 pequeños grupos del intento anterior.
+- Envuelve cada path original de isla + su imagen original en una máscara de copas; retira sólo el clip-path de la imagen para que la MISMA textura pueda continuar a esas copas. Los path d y las coordenadas y zoom de las imágenes no cambian.
+- La franja exterior de las copas recibe una muestra del interior boscoso del mismo bitmap, con el zoom propio de cada isla. Eso evita que píxeles de agua de la imagen antigua aparezcan como manchas marrones en las nuevas copas. No se añaden bitmaps ni se altera la textura interior.
+- No agrega vegetación continental.
+
+PINES FINALES DEL USUARIO (SUSTITUYEN LA PROPUESTA ANTERIOR)
+Río sólido #A09071; si se conserva el gradient rio, sus dos stops son iguales.
+Orilla #A79C7A, opacidad1, sin filtro ni blur. Ancho exterior variable Puente10±2 unidades SVG; Curupí9±2; continente6±2, acordado con el integrador para cumplir el pedido de una orilla más estrecha.
+Punta: exteriorr14 #DBB03B y centror8 #2C382E; ambos siguen en831616.
+Estos valores sustituyen colores, anchos y desenfoque de cualquier versión de estudio anterior. El JSON y el helper ya incluyen este perfil; no restaurar #B8BCA7, .72, blur ni el marcador verde/blanco antiguo.
+Copas: ritmo orgánico, centros separados ~13.5 unidades; formas lobuladas suaves de radios distintos, pequeñas variaciones de giro y solape. Entrantes por los solapes y valles, sin agujeros recortados en el monte. Mismo bitmap de monte, no siluetas sólidas con color ajeno. Punta y primeros/últimos extremos quedan libres.
+Ondas: las siete anteriores #D0CFB8, grosor2.8 y opacidad.46.
+
+EVIDENCIA Y COMPROBACIÓN
+Los renders SVG locales comparacion-desktop.png, comparacion-mobile.png y comparacion-borde.png registran el estudio previo a los últimos pines de agua y marcador; el actual está arriba y el candidato abajo. Son apoyo histórico del material, no sustituyen la captura de la app real ni representan los colores finales.
+El recorte equivalente del borde inferior Puente/Curupí es viewBox380695455225. La referencia f294… es material/gesto de copas y agua, no geografía a calcar.
+Los cuatro paths originales y la arena dinámica siguen idénticos. El helper comprueba que todos los road-* presentes en INPUT se conservan. Mantiene el encuadre y punta a2/3 porque no modifica IslandMap ni ResizeObserver.
+nextjs_prefectura realiza la comparación y confirmación en app real a1440/390 con sus herramientas de navegador; el agente de estética no dispone de navegador en esta reapertura.
+
+LÍMITE
+El agua clara es un tratamiento ilustrativo del paisaje, no profundidad medida ni otra zona de playa. La fórmula de estado y la playa dinámica son las mismas.

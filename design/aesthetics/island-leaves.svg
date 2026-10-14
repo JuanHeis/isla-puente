@@ -1,0 +1,26 @@
+<g id="island-edge-leaves" aria-hidden="true">
+  <use href="#leaf-edge-a" transform="translate(89 454) rotate(-15) scale(0.91)" fill="#5D7849"/>
+  <use href="#leaf-edge-b" transform="translate(135 450) rotate(32) scale(0.78)" fill="#78905A"/>
+  <use href="#leaf-edge-a" transform="translate(220 460) rotate(16) scale(0.92)" fill="#536F44"/>
+  <use href="#leaf-edge-b" transform="translate(276 476) rotate(-24) scale(0.78)" fill="#6A844E"/>
+  <use href="#leaf-edge-a" transform="translate(350 480) rotate(24) scale(0.92)" fill="#4B6A3F"/>
+  <use href="#leaf-edge-b" transform="translate(429 489) rotate(-18) scale(0.76)" fill="#6E8550"/>
+  <use href="#leaf-edge-a" transform="translate(522 507) rotate(8) scale(0.88)" fill="#657D49"/>
+  <use href="#leaf-edge-b" transform="translate(616 526) rotate(26) scale(0.82)" fill="#77905B"/>
+  <use href="#leaf-edge-a" transform="translate(712 550) rotate(-16) scale(0.85)" fill="#597544"/>
+  <use href="#leaf-edge-b" transform="translate(774 575) rotate(32) scale(0.74)" fill="#65804D"/>
+  <use href="#leaf-edge-b" transform="translate(112 526) rotate(-24) scale(0.85)" fill="#5C7747"/>
+  <use href="#leaf-edge-a" transform="translate(197 601) rotate(21) scale(0.8)" fill="#6C8451"/>
+  <use href="#leaf-edge-b" transform="translate(295 679) rotate(34) scale(0.91)" fill="#557040"/>
+  <use href="#leaf-edge-a" transform="translate(404 732) rotate(-29) scale(0.8)" fill="#6D8550"/>
+  <use href="#leaf-edge-a" transform="translate(511 770) rotate(12) scale(0.87)" fill="#4C6B3F"/>
+  <use href="#leaf-edge-b" transform="translate(582 758) rotate(-12) scale(0.8)" fill="#76905B"/>
+  <use href="#leaf-edge-b" transform="translate(668 727) rotate(26) scale(0.74)" fill="#5A7547"/>
+  <use href="#leaf-edge-a" transform="translate(739 679) rotate(-18) scale(0.85)" fill="#4D6B3F"/>
+  <use href="#leaf-edge-b" transform="translate(527 846) rotate(26) scale(0.63)" fill="#627B48"/>
+  <use href="#leaf-edge-a" transform="translate(616 831) rotate(-23) scale(0.68)" fill="#547040"/>
+  <use href="#leaf-edge-b" transform="translate(710 808) rotate(12) scale(0.64)" fill="#74905B"/>
+  <use href="#leaf-edge-a" transform="translate(731 867) rotate(-18) scale(0.7)" fill="#5E7846"/>
+  <use href="#leaf-edge-b" transform="translate(632 891) rotate(24) scale(0.67)" fill="#4D6A3D"/>
+  <use href="#leaf-edge-a" transform="translate(571 880) rotate(-24) scale(0.67)" fill="#6B834E"/>
+</g>

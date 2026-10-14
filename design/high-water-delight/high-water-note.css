@@ -1,0 +1,5 @@
+.high-water-note{margin:0 clamp(22px,4.6cqw,76px) 16px;max-width:70ch;color:var(--ink);font-size:14px;line-height:1.45}
+.high-water-title{margin:0 0 3px;font-weight:800}
+.high-water-copy{margin:0;color:#52614F}
+.high-water-copy a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px;white-space:nowrap}
+@media(max-width:640px){.high-water-note{margin-bottom:12px;max-width:calc(100% - 44px)}}

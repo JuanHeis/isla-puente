@@ -1,0 +1,90 @@
+{
+  "CheckedAt": "2026-10-13T23:52:06.6256955+00:00",
+  "Url": "http://127.0.0.1:59957/",
+  "Source": "https://contenidosweb.prefecturanaval.gob.ar/alturas/?id=230&page=historico&tiempo=30",
+  "CurrentMetres": 3.47,
+  "PublishedArgentina": "2026-10-13 12:00",
+  "Samples": 60,
+  "SourceError": null,
+  "TestsPassed": 21,
+  "TypeCheck": "passed",
+  "ProductionBuild": "passed",
+  "SvgXMLValid": true,
+  "Desktop": {
+    "Viewport": "1440x1000",
+    "AppWidth": 900,
+    "TipFraction": 0.6666666666666666,
+    "HorizontalOverflow": false,
+    "MapHeight": 490
+  },
+  "Mobile": {
+    "Viewport": "390x844",
+    "TipFraction": 0.6666666666666666,
+    "NativeScreenshot": true,
+    "HorizontalOverflow": false,
+    "LongStateFits": true
+  },
+  "SvgRoadPaths": 382,
+  "BrowserWarnings": [],
+  "HistoricalInteractionDoesNotChangeCurrent": true,
+  "Simulator": {
+    "ReturnRestoresLatestRealAndFocus": true,
+    "Keyboard": true,
+    "Persists": false,
+    "FiveBands": true,
+    "FinalMode": "real, closed",
+    "ExplicitLabel": true,
+    "EmptyAndInvalidRetainsLastValid": true
+  },
+  "Aesthetics": {
+    "Soil": "#9CAA85",
+    "TipOuter": {
+      "Radius": 14,
+      "Colour": "#DBB03B"
+    },
+    "Waves": 16,
+    "ShoreOpacity": 1,
+    "PinkLapachos": 6,
+    "WaveColour": "#bfa878",
+    "BlurNodes": 0,
+    "TexturedCanopy": true,
+    "TitleLeaves": true,
+    "TipInner": {
+      "Radius": 8,
+      "Colour": "#2C382E"
+    },
+    "LocalizedMainlandTrees": true,
+    "Shore": "#A79C7A",
+    "TangentialWaves": true,
+    "River": "#A09071"
+  },
+  "Sand": {
+    "FullAtMetres": 0.6,
+    "MaximumBorderWidth": 3.4,
+    "Interruptible": true,
+    "SSRInitialLevel": true,
+    "ReducedMotion": "implemented and code reviewed",
+    "BorderColour": "#A79C7A",
+    "GrowMilliseconds": 360,
+    "BorderAtZero": "none, width 0",
+    "MaximumEast": 914,
+    "ZeroAreaAtMetres": 2,
+    "RetreatMilliseconds": 240
+  },
+  "HighWater": {
+    "MessageOnly": true,
+    "ChartReferenceOnly": 2,
+    "SimulationExplicit": true,
+    "AlertReference": 4.7,
+    "EvacuationReference": 5,
+    "VerifiedOfficialDate": "2026-10-13"
+  },
+  "Notes": [
+    "Fuente oficial HTML; no se encontró una API JSON separada documentada.",
+    "Caché de diez minutos por proceso; no persiste entre reinicios.",
+    "Geometría y playa ilustrativas; calles derivadas de OpenStreetMap con ajuste aproximado.",
+    "Capturas móviles nativas evitan la deformación de fullPage del visor.",
+    "Referencias de río alto no acreditan una alerta u orden emitida.",
+    "Servidor local; sin despliegue externo."
+  ]
+}

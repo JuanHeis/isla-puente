@@ -1,0 +1,25 @@
+<g xmlns="http://www.w3.org/2000/svg" id="coast-details">
+  <defs>
+    <clipPath id="clip-details-parana" clipPathUnits="userSpaceOnUse"><use href="#costa-parana"/></clipPath>
+    <clipPath id="clip-details-santa-fe" clipPathUnits="userSpaceOnUse"><use href="#costa-santa-fe"/></clipPath>
+  </defs>
+  <g id="parques-costeros" clip-path="url(#clip-details-parana)">
+    <path id="verde-parque-oeste" d="M -128.2 697.2 C -115.5 701 -78 705.7 -52.5 720 C -26.9 734.3 8.5 762.4 25.1 782.9 C 41.6 803.3 49.5 819.2 47 842.6 C 44.5 866 28.7 904 9.9 923.2 C -8.9 942.4 -34.4 959.5 -65.9 958 C -97.4 956.4 -169 957.2 -179.4 913.8 C -189.7 870.3 -136.7 733.3 -128.2 697.2 Z" fill="#738A61" opacity="0.15"/>
+    <path id="verde-parque-urquiza" d="M 61.6 828.5 C 71 825.3 100.9 805 117.9 809.6 C 134.8 814.1 153.7 839.2 163.2 856 C 172.8 872.8 180.7 895 175.2 910.3 C 169.6 925.7 151.7 946.1 130.2 948.1 C 108.7 950.1 62.6 933.8 46.2 922.3 C 29.8 910.7 29.1 894.4 31.7 878.8 C 34.2 863.1 56.6 836.9 61.6 828.5 Z" fill="#738A61" opacity="0.17"/>
+  </g>
+  
+  
+<g xmlns="http://www.w3.org/2000/svg" id="coast-main-roads" fill="none" stroke="#DFE2CF" stroke-linecap="round" stroke-linejoin="round">
+  <g id="main-roads-parana" clip-path="url(#clip-details-parana)">
+    <path id="main-estrada" d="M -109.7 619.2 L -47.4 660.7 L 34.8 712.9 L 104 772.8 L 163.8 825.1" stroke-width="4" opacity="0.48"/>
+    <path id="main-laurencena" d="M -275.2 747.2 L -218.8 794.8 L -181.2 873.7 L -125.5 914.5 L -63.3 947.1 L 31.3 985.1 L 177.2 1025.7 L 322.6 1077.4" stroke-width="3.5" opacity="0.44"/>
+    <path id="main-costanera-central" d="M 285.6 938.7 L 374.7 971.7 L 483.9 995.5 L 598 1008.8 L 695.7 1004.9 L 791 983.1 L 888.3 952.6 L 983.8 910.9 L 1065 872.2" stroke-width="4" opacity="0.46"/>
+    <path id="main-acceso-168-parana" d="M 1279.2 700.1 L 1261.2 804.7 L 1247.8 918.6 L 1233.1 1019.1 L 1209.8 1136.5" stroke-width="3.5" opacity="0.42"/>
+  </g>
+  <g id="main-road-norte" clip-path="url(#clip-details-santa-fe)">
+    <path id="main-acceso-168-norte" d="M 72 -149.6 L 456.4 -79.3 L 838.5 -46.8 L 1135.8 -18.1 L 1207.7 2.1 L 1245.2 43.4 L 1256.1 102 L 1247.2 158.8 L 1264.2 220.2 L 1293.3 278.4" stroke-width="3.5" opacity="0.42"/>
+  </g>
+</g>
+
+</g>
+

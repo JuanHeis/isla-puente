@@ -1,0 +1,1 @@
+Ajuste final de la vista a ancho completo: opacidad .24 costas / .28 islas y GaussianBlur 4 para que el agua clara sea muy tenue. Anchos, colores, máscaras, ondas, hojas y geometría sin cambios.

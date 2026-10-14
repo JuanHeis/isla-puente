@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-13T23:58:22.463Z",
+  "title": "Design System: Isla Puente",
+  "extensions": {
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "640px"
+      }
+    ],
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel cálido"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta verde oscura"
+      },
+      "forest": {
+        "role": "primary",
+        "displayName": "Verde de marca y gráfico"
+      },
+      "river": {
+        "role": "secondary",
+        "displayName": "Agua terrosa del Paraná"
+      },
+      "shoreWater": {
+        "role": "secondary",
+        "displayName": "Agua clara de orilla"
+      },
+      "tipOuter": {
+        "role": "tertiary",
+        "displayName": "Oro del marcador"
+      },
+      "tipInner": {
+        "role": "tertiary",
+        "displayName": "Centro verde del marcador"
+      },
+      "mainland": {
+        "role": "neutral",
+        "displayName": "Oliva de tierra firme"
+      },
+      "sand": {
+        "role": "tertiary",
+        "displayName": "Arena natural"
+      },
+      "ripples": {
+        "role": "secondary",
+        "displayName": "Ondas cálidas"
+      },
+      "secondaryInk": {
+        "role": "neutral",
+        "displayName": "Oliva de lectura secundaria"
+      },
+      "roads": {
+        "role": "neutral",
+        "displayName": "Piedra clara de calles"
+      },
+      "lapachos": {
+        "role": "tertiary",
+        "displayName": "Rosa suave de lapachos"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Estado grande",
+        "purpose": "Los cinco estados de playa; textura de hojas sólo aquí."
+      },
+      "displayMobile": {
+        "displayName": "Estado en móvil",
+        "purpose": "Únicamente cambia el tamaño hasta 640 px."
+      },
+      "brand": {
+        "displayName": "Nombre",
+        "purpose": "Nombre compacto y punto verde."
+      },
+      "reading": {
+        "displayName": "Lectura",
+        "purpose": "Altura y fecha discretas."
+      }
+    },
+    "motion": [
+      {
+        "name": "beach-grow",
+        "value": "360ms",
+        "purpose": "Crecimiento del borde de arena."
+      },
+      {
+        "name": "beach-retreat",
+        "value": "240ms",
+        "purpose": "Retracción del borde de arena."
+      },
+      {
+        "name": "beach-ease",
+        "value": "1 - (1 - t) ** 3",
+        "purpose": "Desaceleración real del rAF; al interrumpir retoma progreso visible. Reduced motion aplica inmediatamente."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Nombre de la app",
+      "kind": "custom",
+      "description": "Nombre compacto y un punto verde, heredados del boceto.",
+      "html": "<div class=\"ds-brand\">Isla Puente<span aria-hidden=\"true\"></span></div>",
+      "css": ".ds-brand{display:flex;align-items:center;gap:13px;font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(22px,2.4cqw,34px);letter-spacing:-.03em;color:var(--ink)}.ds-brand span{width:.65em;height:.65em;border-radius:50%;background:var(--forest)}"
+    },
+    {
+      "name": "Estado de playa",
+      "kind": "custom",
+      "description": "La respuesta principal, con el display aprobado.",
+      "html": "<div class=\"ds-status\">No hay playa</div>",
+      "css": ".ds-status{font-family:ArchivoBlack,sans-serif;font-size:clamp(46px,9.8cqw,132px);font-weight:400;line-height:1.02;letter-spacing:-.035em;text-wrap:balance;color:var(--ink)}"
+    },
+    {
+      "name": "Recuperación de datos",
+      "kind": "button",
+      "description": "Acción discreta visible sólo ante un fallo de consulta.",
+      "html": "<button class=\"ds-retry\">Volver a consultar</button>",
+      "css": ".ds-retry{font-family:Archivo,sans-serif;font-size:14px;color:var(--ink);background:transparent;border:0;padding:8px 0;text-decoration:underline;text-underline-offset:4px;cursor:pointer}.ds-retry:hover{color:var(--forest)}.ds-retry:focus-visible{outline:2px solid var(--ink);outline-offset:5px}.ds-retry:disabled{opacity:.55;cursor:wait}"
+    },
+    {
+      "name": "Lectura oficial",
+      "kind": "custom",
+      "description": "Ejemplo estático de la lectura discreta; la app utiliza el último registro oficial.",
+      "html": "<p class=\"ds-reading\"><strong>3,47 m</strong> · 13 de oct de 2026, 12:00 · Paraná</p>",
+      "css": ".ds-reading{font-family:Archivo,sans-serif;font-size:15px;line-height:1.45;color:#52614F;margin:0}.ds-reading strong{font-weight:800;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Acción discreta",
+      "kind": "button",
+      "refersTo": "quiet-button",
+      "description": "Activar una prueba o volver al nivel real sin tarjeta ni botón de relleno.",
+      "html": "<button class=\"ds-action\" type=\"button\">Simular altura</button>",
+      "css": ".ds-action{font-family:Archivo,sans-serif;font-size:15px;min-height:44px;padding:10px 0;border:0;background:transparent;color:var(--ink);text-align:left;text-decoration:underline;text-underline-offset:4px;cursor:pointer}.ds-action:hover{color:var(--forest)}.ds-action:focus-visible{outline:2px solid var(--ink);outline-offset:5px}"
+    },
+    {
+      "name": "Campo de altura simulada",
+      "kind": "input",
+      "refersTo": "decimal-input",
+      "description": "Campo decimal plano; acepta coma o punto en la app.",
+      "html": "<label class=\"ds-field\">Altura simulada <input type=\"text\" inputmode=\"decimal\" value=\"1,40\" aria-label=\"Altura simulada\"> m</label>",
+      "css": ".ds-field{display:flex;align-items:center;gap:12px;font-family:Archivo,sans-serif;font-size:15px;font-weight:700;color:#52614F}.ds-field input{width:74px;min-height:44px;padding:8px 6px;border:0;border-bottom:1px solid #7B866E;border-radius:0;background:transparent;color:var(--ink);font-size:17px;font-weight:800;font-variant-numeric:tabular-nums;text-align:right}.ds-field input:focus-visible{outline:2px solid var(--ink);outline-offset:5px}"
+    },
+    {
+      "name": "Deslizador de simulación",
+      "kind": "input",
+      "description": "Control nativo verde con área de interacción de 44 px.",
+      "html": "<input class=\"ds-range\" type=\"range\" min=\"0\" max=\"6\" step=\"0.01\" value=\"1.4\" aria-label=\"Ajustar altura simulada\">",
+      "css": ".ds-range{width:100%;min-height:44px;margin:0;accent-color:var(--forest);cursor:pointer}.ds-range:focus-visible{outline:2px solid var(--ink);outline-offset:5px}"
+    },
+    {
+      "name": "Mensaje contextual de río alto",
+      "kind": "custom",
+      "description": "Sólo cuando corresponde; ejemplo explícitamente simulado, sin superficies de alarma.",
+      "html": "<div class=\"ds-high\"><p class=\"ds-high-title\">Simulación con río alto.</p><p>Esta altura simulada alcanza la referencia de alerta de Paraná (4,70 m).</p></div>",
+      "css": ".ds-high{font-family:Archivo,sans-serif;max-width:70ch;color:#52614F;font-size:14px;line-height:1.45}.ds-high p{margin:0}.ds-high .ds-high-title{margin-bottom:3px;font-weight:800;color:var(--ink)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Mapa vivo de la costa",
+    "overview": "Esta es la base visual aprobada por el usuario el 13 de octubre de 2026. Conserva el mapa reconocible, la tipografía contundente y el paisaje cálido. El estado se entiende primero; después aparece la isla, con verdes más vivos y más textura que sus alrededores. Los datos acompañan con discreción.\n\nLa composición es una lámina centrada sobre papel continuo. La ilustración conserva sus formas aunque cambie el recorte. El monte y el agua aportan riqueza; el resto de la interfaz permanece sobrio.",
+    "keyCharacteristics": [
+      "Isla como foco principal.",
+      "Geometría compartida entre escritorio y móvil.",
+      "Monte texturado con copas suaves y continuas.",
+      "Agua terrosa, orilla estrecha y ondas discretas.",
+      "Tipografía grande; datos y herramientas discretos."
+    ],
+    "dos": [
+      "Conservar a la isla como foco, con más textura y verdes más vivos que tierra firme.",
+      "Mantener la punta a dos tercios del mapa dentro de la columna y recortar el mismo mundo en móvil.",
+      "Reutilizar los activos aprobados y mantener sincronizados el SVG público y su espejo React.",
+      "Diferenciar visualmente lectura oficial, consulta histórica y simulación.",
+      "Documentar los cambios visuales explícitamente pedidos por el usuario sobre esta base."
+    ],
+    "donts": [
+      "No reintroducir rótulos geográficos, caleta eliminada, borde oscuro en islas o arena continua sobre tierra firme.",
+      "No sustituir copas por tréboles aislados, ni bloques arbolados por una trama uniforme.",
+      "No ampliar la banda clara, agregar blur o cambiar los colores exactos para compensar otro ajuste.",
+      "No inventar grillas de calles ni devolver trazos paralelos ruidosos.",
+      "No convertir datos de una captura en valores vivos ni conservar una simulación silenciosa."
+    ]
+  }
+}

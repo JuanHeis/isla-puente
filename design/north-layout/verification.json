@@ -1,0 +1,69 @@
+{
+  "northVector": {
+    "x": 7.163893222470508,
+    "y": -31.535036458142926
+  },
+  "clockwiseFromVerticalDeg": 12.798805664131605,
+  "cases": [
+    {
+      "width": 320,
+      "mapHeight": 291.2,
+      "left": 22,
+      "top": 40,
+      "right": 50,
+      "bottom": 86,
+      "noOverflow": true,
+      "paperGap": 14
+    },
+    {
+      "width": 390,
+      "mapHeight": 354.90000000000003,
+      "left": 22,
+      "top": 40,
+      "right": 50,
+      "bottom": 86,
+      "noOverflow": true,
+      "paperGap": 14
+    },
+    {
+      "width": 640,
+      "mapHeight": 410,
+      "left": 29.439999999999998,
+      "top": 40,
+      "right": 57.44,
+      "bottom": 86,
+      "noOverflow": true,
+      "paperGap": 14
+    },
+    {
+      "width": 900,
+      "mapHeight": 486.00000000000006,
+      "left": 41.4,
+      "top": 56,
+      "right": 69.4,
+      "bottom": 102,
+      "noOverflow": true,
+      "paperGap": 11
+    },
+    {
+      "width": 1440,
+      "mapHeight": 777.6,
+      "left": 66.24,
+      "top": 56,
+      "right": 94.24,
+      "bottom": 102,
+      "noOverflow": true,
+      "paperGap": 11
+    },
+    {
+      "width": 2000,
+      "mapHeight": 780,
+      "left": 76,
+      "top": 56,
+      "right": 104,
+      "bottom": 102,
+      "noOverflow": true,
+      "paperGap": 11
+    }
+  ]
+}
