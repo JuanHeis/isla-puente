@@ -22,7 +22,7 @@ El usuario creó y publicó el repositorio en la rama `main`, con remoto GitHub 
 3. Deja el preset **Next.js** y la carpeta raíz del repositorio. Usa `main` como rama de producción. Node 22.x queda fijado en `package.json`; conserva los comandos de build y salida predeterminados. No necesitas variables de entorno.
 4. Publica desde Vercel. La URL HTTPS permite instalar la PWA y Vercel actualizará el proyecto tras los próximos pushes a esa rama.
 
-La app necesita su servidor Next.js para consultar Prefectura. No usar exportación estática. No hay configuración Vercel redundante ni dominio fijado en los activos.
+La app necesita su servidor Next.js para consultar Prefectura. No usar exportación estática. `vercel.json` fija únicamente la región de ejecución `gru1` (São Paulo), necesaria para alcanzar la fuente desde el servidor. El dominio público está definido sólo en canonical y metadata de compartir.
 
 Guías oficiales: [importación Git en Vercel](https://vercel.com/docs/git), [Node en Vercel](https://vercel.com/docs/functions/runtimes/node-js/node-js-versions) y [PWA en Next.js](https://nextjs.org/docs/app/guides/progressive-web-apps).
 
@@ -71,3 +71,9 @@ El mapa es una ilustración geográfica aproximada, con cuatro siluetas conserva
 ## Compartir
 
 La imagen OG/Twitter de 1200 × 630 px está en `public/og-isla-puente.png`. Reutiliza el paisaje y las fuentes locales, sin altura ni estado actual para evitar una lectura desactualizada en cachés sociales. OG, Twitter y canonical apuntan a https://isla-puente.vercel.app. La imagen se sirve estáticamente y no consulta Prefectura. Puede regenerarse con `node scripts/generate-og.mjs`, usando Sharp ya incluido por Next.js; no es un paso del build.
+
+## Publicación verificada
+
+La app está publicada en https://isla-puente.vercel.app/. El 13/10/2026 por la noche se comprobó HTTP 200, último registro 3,47 m del mismo día a las 12:00 de Argentina, 60 muestras y ningún error de fuente. En la región predeterminada `iad1`, el diagnóstico detectó `UND_ERR_CONNECT_TIMEOUT` después de unos 10,5 s al conectar con Prefectura. Ejecutar las funciones en `gru1` permitió consultar la misma URL oficial correctamente: API 200 en 822 ms. Se conservaron HTTPS, timeout, validación de fechas/estación y datos oficiales. La evidencia HTTP y los commits funcionales están en [design/verification/publicacion.json](design/verification/publicacion.json). Las capturas de estilo son locales; no se obtuvo una captura nueva de producción porque el navegador de verificación no tenía superficies disponibles.
+
+Regiones según la [documentación oficial de Vercel](https://vercel.com/docs/functions/configuring-functions/region). Si vuelve a fallar la fuente, se aplica la recuperación documentada y puede consultarse el código seguro de `sourceIssue`.

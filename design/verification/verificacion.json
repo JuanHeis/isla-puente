@@ -1,5 +1,5 @@
 {
-  "CheckedAt": "2026-10-14T00:29:31.309Z",
+  "CheckedAt": "2026-10-14T01:01:14.509Z",
   "Url": "http://127.0.0.1:59957/",
   "Source": "https://contenidosweb.prefecturanaval.gob.ar/alturas/?id=230&page=historico&tiempo=30",
   "CurrentMetres": 3.47,
@@ -85,7 +85,8 @@
     "Geometría y playa ilustrativas; calles derivadas de OpenStreetMap con ajuste aproximado.",
     "Capturas móviles nativas evitan la deformación de fullPage del visor.",
     "Referencias de río alto no acreditan una alerta u orden emitida.",
-    "Servidor local; sin despliegue externo."
+    "Publicación autorizada y verificada; timeout de conexión desde iad1 resuelto ejecutando funciones en gru1.",
+    "No se obtuvo captura nueva de producción; comprobación HTTP de página/API/metadatos completada."
   ],
   "Polish": {
     "ChartDots": 0,
@@ -129,13 +130,27 @@
     "Branch": "main",
     "Remote": "https://github.com/JuanHeis/isla-puente.git",
     "UserInitialCommit": "baf1828",
-    "AgentPush": false,
-    "PublishedByUser": true
+    "AgentPush": true,
+    "PublicationAuthorized": true,
+    "FunctionalCommits": {
+      "sharingAndDiagnostics": "5e4c92960ab15d7ccde5add0d215ab288cf8f24b",
+      "workingRegion": "1180bcbd98845281e105e2c08d1da7ece99e4528"
+    }
   },
   "PublishedStatus": {
     "Url": "https://isla-puente.vercel.app/",
-    "UpstreamError": true,
-    "Diagnosis": "in progress; no invented readings"
+    "ApiStatus": 200,
+    "UpstreamError": false,
+    "Current": {
+      "timestamp": 1791903600000,
+      "level": 3.47
+    },
+    "Samples": 60,
+    "Region": "gru1",
+    "ElapsedMs": 822,
+    "SourceIssue": null,
+    "OGStatus": 200,
+    "ProductionScreenshot": null
   },
   "Documentation": {
     "CanonicalSections": 8,

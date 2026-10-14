@@ -1,0 +1,51 @@
+{
+  "url": "https://isla-puente.vercel.app/",
+  "verified": "2026-10-14T01:01:14.509Z",
+  "functionalCommits": {
+    "sharingAndDiagnostics": "5e4c92960ab15d7ccde5add0d215ab288cf8f24b",
+    "workingRegion": "1180bcbd98845281e105e2c08d1da7ece99e4528"
+  },
+  "deployment": "https://vercel.com/juanheis-projects/isla-puente/GRVyQGXcCs6ik3HkeY812TCs4ffB",
+  "before": {
+    "checkedAt": "2026-10-14T00:58:06.804Z",
+    "apiStatus": 503,
+    "elapsedMs": 11201,
+    "vercelId": "gru1::iad1::qnbmj-1791939477211-bab4cbb20a4f",
+    "date": "Wed, 14 Oct 2026 00:58:08 GMT",
+    "current": null,
+    "samples": 0,
+    "error": "No pudimos consultar Prefectura. Volvé a intentar en unos minutos.",
+    "sourceIssue": {
+      "kind": "transport",
+      "code": "UND_ERR_CONNECT_TIMEOUT",
+      "elapsedMs": 10502,
+      "region": "iad1"
+    },
+    "ogStatus": 200,
+    "ogMime": "image/png"
+  },
+  "after": {
+    "checkedAt": "2026-10-14T01:01:14.509Z",
+    "apiStatus": 200,
+    "elapsedMs": 822,
+    "vercelId": "gru1::gru1::fj7j4-1791939675284-57813c7e89fd",
+    "date": "Wed, 14 Oct 2026 01:01:15 GMT",
+    "current": {
+      "timestamp": 1791903600000,
+      "level": 3.47
+    },
+    "samples": 60,
+    "error": null,
+    "sourceIssue": null,
+    "ogStatus": 200,
+    "ogMime": "image/png"
+  },
+  "independentPageVerification": {
+    "status": 200,
+    "state": "No hay playa",
+    "reading": "3,47 m",
+    "metadataCorrect": true
+  },
+  "productionScreenshot": null,
+  "screenshotLimit": "No browser surfaces available in verification turn; HTTP page/API and metadata verified."
+}

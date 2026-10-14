@@ -139,7 +139,7 @@ Los 2 m proceden de la experiencia personal del usuario, no de una clasificació
 
 PWA instalable como «Isla Puente», en modo standalone, con iconos del marcador amarillo/verde, manifiesto raíz e HTTPS en producción. La instalación depende del navegador; no solicita notificaciones ni permisos. Una apertura nueva sin conexión muestra «Sin conexión» y permite reintentar, sin estado de playa, altura o gráfico ficticio. El service worker guarda sólo recursos estáticos y esa pantalla. Las rutas API, HTML SSR y RSC no se almacenan para aparentar actualidad. En una vista abierta que pierde conexión se mantiene el comportamiento de último registro válido y error discreto.
 
-Preparada para importar desde GitHub en Vercel con Node 22.x y Next.js dinámico; sin claves de entorno ni export estático. La caché de Prefectura sigue siendo temporal y propia de cada proceso/instancia; no constituye almacenamiento persistente compartido. La preparación local no publica ni despliega el proyecto.
+Preparada para importar desde GitHub en Vercel con Node 22.x y Next.js dinámico; sin claves de entorno ni export estático. La caché de Prefectura sigue siendo temporal y propia de cada proceso/instancia; no constituye almacenamiento persistente compartido. La preparación inicial fue local; el usuario autorizó posteriormente publicar y verificar el proyecto.
 
 Fundamento general de erosión y deposición: [USGS, dinámica de sedimentos en barras y llanuras fluviales](https://www.usgs.gov/publications/dynamic-relations-deposition-sediment-floodplains-and-point-bars-a-freely-meandering). Este estudio no establece el umbral personal de Isla Puente.
 
@@ -147,3 +147,8 @@ Fundamento general de erosión y deposición: [USGS, dinámica de sedimentos en 
 ### Vista previa al compartir
 
 OG/Twitter utilizan una imagen estática 1200 × 630 con el nombre y la pregunta «¿Hay playa en la punta?», sin cifras o estado de playa. Se aloja en la app y no consulta Prefectura al renderizar. Canonical y metadataBase usan la URL pública proporcionada por el usuario, https://isla-puente.vercel.app.
+
+
+### Conexión publicada verificada
+
+El sitio está en https://isla-puente.vercel.app/. El diagnóstico del primer despliegue identificó timeout de conexión (`UND_ERR_CONNECT_TIMEOUT`, alrededor de 10,5 s) desde la región `iad1`; no recibió una respuesta oficial que pudiera parsear. La configuración oficial `vercel.json` fija las funciones en `gru1`. En ese despliegue se comprobó API 200, 3,47 m con fecha 13/10/2026 12:00 Argentina y 60 registros válidos, sin errores. No se cambiaron TLS, fechas, parser ni se utilizaron snapshots como datos actuales. OG sigue siendo estático y sin cifras.
