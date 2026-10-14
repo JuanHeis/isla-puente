@@ -1,6 +1,23 @@
 node_modules/
 .next/
+.vercel/
 *.tsbuildinfo
 .env*
 !.env.example
 .runtime/
+*.log
+*.pid
+
+# Estudios y herramientas locales; conservar evidencia aprobada y la referencia de tests.
+/design/aesthetics/
+/design/beach-animate/
+/design/coast/
+/design/high-water-delight/
+/design/north-layout/
+/design/river-simulator/
+/design/roads/
+/design/roads-revision/
+/design/shore-polish/
+/design/wave-polish/
+/design/boceto-base/*
+!/design/boceto-base/index.html

@@ -1,5 +1,27 @@
 import { mergeReadings, PREFECTURA_URL, REFRESH_MS, reconcileReports } from "./river.ts";
-import type { Reading, RiverReport } from "./river.ts";
+import type { Reading, RiverReport, SourceIssue } from "./river.ts";
+
+class PrefecturaError extends Error {
+  kind: SourceIssue["kind"];
+  code: string;
+  constructor(kind: SourceIssue["kind"], code: string, message: string) {
+    super(message);
+    this.kind = kind;
+    this.code = code;
+  }
+}
+
+function sourceIssue(error: unknown, elapsedMs: number): SourceIssue {
+  const region = process.env.VERCEL_REGION;
+  const location = region && /^[a-z0-9]{3,12}$/.test(region) ? { region } : {};
+  if (error instanceof PrefecturaError) return { kind: error.kind, code: error.code, elapsedMs, ...location };
+  if (error instanceof Error && ["TimeoutError", "AbortError"].includes(error.name)) {
+    return { kind: "timeout", code: "SOURCE_TIMEOUT", elapsedMs, ...location };
+  }
+  const cause = error instanceof Error ? (error as Error & { cause?: { code?: unknown } }).cause : undefined;
+  const code = typeof cause?.code === "string" && /^[A-Z0-9_]{1,50}$/.test(cause.code) ? cause.code : "FETCH_FAILED";
+  return { kind: "transport", code, elapsedMs, ...location };
+}
 
 const DAY_MS = 86_400_000;
 const MONTHS: Record<string, number> = { ENE: 0, FEB: 1, MAR: 2, ABR: 3, MAY: 4, JUN: 5, JUL: 6, AGO: 7, SEP: 8, OCT: 9, NOV: 10, DIC: 11 };
@@ -17,11 +39,11 @@ function localTimestamp(year: number, month: number, day: number, hour: number, 
 }
 
 export function parsePrefectura(html: string, now = Date.now()): { current: Reading; history: Reading[] } {
-  if (html.length > 2_000_000) throw new Error("Respuesta demasiado grande.");
+  if (html.length > 2_000_000) throw new PrefecturaError("format", "SOURCE_TOO_LARGE", "Respuesta demasiado grande.");
   const text = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, " ").replace(/<[^>]*>/g, " ")
     .replace(/&nbsp;|&#160;/g, " ").replace(/&Uacute;|&#218;/g, "Ú").replace(/\s+/g, " ");
   if (!/name=["']id["']\s+value=["']230["']/i.test(html) || !/Puerto:\s*PARAN[AÁ]\s+en\s+r[ií]o\s+PARAN[AÁ]/i.test(text)) {
-    throw new Error("La respuesta no corresponde a la estación Paraná 230.");
+    throw new PrefecturaError("format", "SOURCE_WRONG_STATION", "La respuesta no corresponde a la estación Paraná 230.");
   }
 
   let history: Reading[] = [];
@@ -58,7 +80,7 @@ export function parsePrefectura(html: string, now = Date.now()): { current: Read
 
   history = mergeReadings(history, latest);
   const current = history.at(-1);
-  if (!current) throw new Error("Prefectura no publicó registros válidos.");
+  if (!current) throw new PrefecturaError("data", "SOURCE_NO_VALID_READINGS", "Prefectura no publicó registros válidos.");
   // The table may contain a full year despite tiempo=30. Keep the requested month.
   history = history.filter((reading) => reading.timestamp >= now - 30 * DAY_MS);
   if (!history.some((reading) => reading.timestamp === current.timestamp)) history.push(current);
@@ -71,24 +93,27 @@ export async function fetchPrefecturaPage() {
     signal: AbortSignal.timeout(12_000),
     headers: { Accept: "text/html" },
   });
-  if (!response.ok) throw new Error(`Prefectura respondió ${response.status}.`);
-  if (!response.headers.get("content-type")?.includes("text/html")) throw new Error("Formato de respuesta inesperado.");
-  if (Number(response.headers.get("content-length")) > 2_000_000) throw new Error("Respuesta demasiado grande.");
+  if (!response.ok) throw new PrefecturaError("http", `SOURCE_HTTP_${response.status}`, `Prefectura respondió ${response.status}.`);
+  if (!response.headers.get("content-type")?.includes("text/html")) throw new PrefecturaError("format", "SOURCE_CONTENT_TYPE", "Formato de respuesta inesperado.");
+  if (Number(response.headers.get("content-length")) > 2_000_000) throw new PrefecturaError("format", "SOURCE_TOO_LARGE", "Respuesta demasiado grande.");
   return response.text();
 }
 
-export function createRiverReader(fetchPage = fetchPrefecturaPage, clock = Date.now) {
-  let report: RiverReport = { current: null, history: [], fetchedAt: null, error: null };
+export function createRiverReader(fetchPage = fetchPrefecturaPage, clock = Date.now, onFailure: (issue: SourceIssue) => void = (issue) => console.warn("[isla-puente:prefectura]", issue)) {
+  let report: RiverReport = { current: null, history: [], fetchedAt: null, error: null, sourceIssue: null };
   let nextCheck = 0;
   let pending: Promise<RiverReport> | null = null;
 
   async function refresh() {
+    const started = clock();
     try {
       const parsed = parsePrefectura(await fetchPage(), clock());
       // A cached upstream page must never replace a newer record already obtained.
-      report = reconcileReports(report, { ...parsed, fetchedAt: clock(), error: null });
-    } catch {
-      report = { ...report, error: report.current
+      report = reconcileReports(report, { ...parsed, fetchedAt: clock(), error: null, sourceIssue: null });
+    } catch (error) {
+      const issue = sourceIssue(error, Math.max(0, clock() - started));
+      onFailure(issue);
+      report = { ...report, sourceIssue: issue, error: report.current
         ? "No pudimos actualizar Prefectura. Mostramos el último registro obtenido."
         : "No pudimos consultar Prefectura. Volvé a intentar en unos minutos." };
     }

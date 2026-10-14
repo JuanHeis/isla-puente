@@ -5,6 +5,7 @@ colors:
   paper: "#F5F4E9"
   ink: "#29362B"
   forest: "#4B6245"
+  plotLine: "#506344"
   river: "#A09071"
   shoreWater: "#A79C7A"
   tipOuter: "#DBB03B"
@@ -76,9 +77,10 @@ La composición es una lámina centrada sobre papel continuo. La ilustración co
 
 Referencias del estado aprobado, diferenciadas de las pruebas:
 
-- [Escritorio con lectura real](design/verification/isla-puente-desktop.jpg) y [móvil con lectura real](design/verification/isla-puente-mobile.jpg).
+- [Escritorio con lectura real](design/verification/isla-puente-desktop.jpg) y [móvil con lectura real](design/verification/isla-puente-mobile.jpg), con [detalle del gráfico móvil](design/verification/chart-mobile.jpg).
 - [Simulación de arena máxima a 0,60 m](design/verification/simulation-max-desktop.jpg): incluye el borde final de 3,4 unidades.
 - [Simulación de alerta a 4,70 m](design/verification/simulation-alert-desktop.jpg) y [simulación de río alto a 5,00 m](design/verification/simulation-high-mobile.jpg).
+- [Título de dos líneas en simulación](design/verification/polish-two-lines-mobile.jpg) y [apertura sin conexión](design/verification/offline-mobile.jpg).
 
 Las lecturas de esas capturas son instantáneas de verificación. Los valores vivos pertenecen a la fuente oficial; las decisiones funcionales se mantienen en [PRODUCT.md](PRODUCT.md).
 
@@ -86,7 +88,7 @@ Las lecturas de esas capturas son instantáneas de verificación. Los valores vi
 
 Los valores exactos del frontmatter son la autoridad. Se extraen de `src/app/globals.css`, el SVG aprobado y sus componentes; no convertirlos en una paleta aproximada.
 
-El monte vivo es el acento principal. La textura original de Isla Puente y Curupí se conserva en el activo del mapa; el token forest también sostiene la marca y el gráfico. Tierra firme usa mainland sólido y bloques verdes localizados, subordinados a las islas. Los lapachos rosa se reservan a unos pocos árboles de Urquiza.
+El monte vivo es el acento principal. La textura original de Isla Puente y Curupí se conserva en el activo del mapa; forest sostiene la marca y los controles, mientras plotLine colorea la curva del gráfico. Tierra firme usa mainland sólido y bloques verdes localizados, subordinados a las islas. Los lapachos rosa se reservan a unos pocos árboles de Urquiza.
 
 El río usa river uniforme. shoreWater sirve para la banda orgánica junto al borde visible de las copas y costas, con opacidad 1 y sin blur; también colorea el borde fino de arena. No ampliar esa banda para hacerla más visible ni aclarar su color. ripples se reserva a las ondas.
 
@@ -98,7 +100,9 @@ Archivo Black sostiene los estados y Archivo el nombre, datos, controles y vínc
 
 El tamaño del título usa unidades de contenedor, con el ajuste displayMobile hasta 640 px. A una columna de 900 px su tamaño es 88,2 px. Se conserva el interletraje compacto, altura de línea y balance de líneas; los estados largos pueden ocupar más de una línea. La marca usa brand, con 23 px y 22 px de separación superior en móvil.
 
-Sólo los cinco títulos de estado llevan hojas muy suaves dentro de los glifos, mediante `public/map/title-leaves.svg`. El fondo oscuro se conserva si no carga el motivo. La selección sigue legible y forced-colors usa texto sólido. No extender la textura a fechas, mensajes, controles o fuentes.
+Sólo los cinco títulos de estado usan el mismo follaje bitmap del monte. `public/map/title-forest.png` es un recorte sin alterar de 240 × 120 px del interior de `referencia-estilo.png` (410,565–650,685); se repite a 300 × 150 px con una capa de tinta rgba(41,54,43,.58). El detalle de hojas se reconoce sin aclarar el título ni competir con la isla. El fondo sólido conserva la lectura si falla el activo, y forced-colors usa texto sólido. No extender la textura a fechas, mensajes, controles o fuentes.
+
+El título reserva .16em debajo de la línea para pintar completa la «y». Su margen inferior compensa ese espacio: calc(12px - .16em), 15px en móvil. La alineación óptica corrige el bearing del archivo: −.045em para H/N y −.012em para C/S; hasta 640 px, −.025em y .02em respectivamente. La lectura recibe 1 px de ajuste izquierdo. No recortar el glifo ni reducir la tipografía para resolver estos detalles.
 
 La lectura principal usa reading, reducida a 14 px en móvil; la altura tiene peso 800 y números tabulares. El gráfico emplea un rótulo de 18 px, 16 px en móvil; fechas, procedencia y avisos usan texto secundario de 14–15 px.
 
@@ -138,13 +142,15 @@ El nombre compacto y su punto verde preceden al estado grande. El estado tiene u
 
 La arena se satura en su máximo ilustrativo a 0,60 m y llega a área cero a 2,00 m; el título en ese límite conserva «Casi no hay playa». La primera lectura se dibuja desde SSR. Los cambios crecen en 360 ms y se retiran en 240 ms, con desaceleración cúbica, retomando el progreso visible al interrumpirse. Sólo cambia el `d` y borde de arena; los demás nodos SVG permanecen estables. La preferencia de reducción de movimiento aplica el resultado directamente.
 
-El gráfico es una línea SVG sencilla, puntos redondos, fechas reales y una única referencia discontinua de playa de 2 m. Su lectura consultada acompaña el rótulo; el puntero o teclado no cambian el estado ni la arena. En móvil se reserva una franja izquierda de 26 px para separar «2 m» del eje.
+El gráfico es una línea SVG sencilla de 3 px en plotLine, sin puntos ni círculos. Conserva fechas reales, alturas en metros y una única referencia discontinua de playa de 2 m. La inspección usa únicamente una línea vertical tenue de 1 px, discontinua y al 50 %. Su lectura consultada acompaña el rótulo; el puntero o teclado no cambian el estado ni la arena. En móvil se reserva una franja izquierda de 26 px para separar «2 m» del eje. Una nota quieta de 13 px y altura de línea 1.45 aclara que el umbral proviene de experiencia personal y que la dinámica fluvial puede cambiar la arena.
 
 El simulador permanece cerrado por defecto. «Simular altura» abre campo decimal y deslizador discretos bajo el gráfico, sin tarjeta. SIMULACIÓN y la altura manual se muestran junto al estado; el último registro oficial continúa visible. «Volver al nivel real» cierra la herramienta y devuelve el foco. Campos y acciones ofrecen al menos 44 px de altura; el campo tiene 74 px de ancho, fondo transparente y sólo una línea inferior.
 
 Los avisos de río alto son texto pequeño bajo la lectura, sólo al alcanzar las referencias publicadas de 4,70/5,00 m. La simulación lo identifica explícitamente; no son una orden emitida ni nuevas líneas del gráfico. El detalle funcional y procedencia siguen en PRODUCT.md.
 
-Los vínculos y acciones son subrayados, con foco visible de 2 px y separación de 5 px. La recuperación de fuente se muestra discretamente en esa zona; conserva la lectura válida y su fecha. No cambiarla por una tarjeta de error o añadir decoración permanente.
+El texto estático no es seleccionable. Los campos editables del simulador conservan selección, caret y teclado normal, incluido Ctrl+A. Los vínculos y acciones son subrayados, con foco visible de 2 px y separación de 5 px. La recuperación de fuente se muestra discretamente en esa zona; conserva la lectura válida y su fecha. No cambiarla por una tarjeta de error o añadir decoración permanente.
+
+La pantalla de una apertura sin conexión conserva papel, nombre y punto verde, con título sólido «Sin conexión», explicación breve y enlace «Volver a consultar». No dibuja estado de playa ni una lectura anterior. La instalación utiliza el símbolo focal amarillo/verde en favicon e iconos; no cambia el punto verde del nombre. La [imagen estática para compartir](public/og-isla-puente.png), de 1200 × 630 px, reutiliza papel, fuentes, follaje y el mismo mapa con la punta a dos tercios. Su pregunta «¿Hay playa en la punta?» no incluye altura, fecha ni estado vivo que pueda quedar antiguo en caché social.
 
 ## Do's and Don'ts
 

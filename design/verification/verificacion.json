@@ -1,17 +1,17 @@
 {
-  "CheckedAt": "2026-10-13T23:52:06.6256955+00:00",
+  "CheckedAt": "2026-10-14T00:29:31.309Z",
   "Url": "http://127.0.0.1:59957/",
   "Source": "https://contenidosweb.prefecturanaval.gob.ar/alturas/?id=230&page=historico&tiempo=30",
   "CurrentMetres": 3.47,
   "PublishedArgentina": "2026-10-13 12:00",
   "Samples": 60,
   "SourceError": null,
-  "TestsPassed": 21,
+  "TestsPassed": 31,
   "TypeCheck": "passed",
   "ProductionBuild": "passed",
   "SvgXMLValid": true,
   "Desktop": {
-    "Viewport": "1440x1000",
+    "Viewport": "1440x1100",
     "AppWidth": 900,
     "TipFraction": 0.6666666666666666,
     "HorizontalOverflow": false,
@@ -86,5 +86,86 @@
     "Capturas móviles nativas evitan la deformación de fullPage del visor.",
     "Referencias de río alto no acreditan una alerta u orden emitida.",
     "Servidor local; sin despliegue externo."
-  ]
+  ],
+  "Polish": {
+    "ChartDots": 0,
+    "HistoricalKeyboard": true,
+    "PersonalReferenceNote": true,
+    "StaticTextSelection": false,
+    "SimulatorInputSelection": true,
+    "TitleTexture": "same island bitmap crop, title-forest.png",
+    "TitleTextureInkOpacity": 0.58,
+    "FiveTitlesDesktopAndMobile": true,
+    "TwoLineDescenderComplete": true,
+    "OpticalAlignment": true
+  },
+  "PWA": {
+    "Manifest": true,
+    "Standalone": true,
+    "FaviconSizes": [
+      16,
+      32,
+      48,
+      64
+    ],
+    "AnyIconSizes": [
+      192,
+      512
+    ],
+    "MaskableIconSize": 512,
+    "AppleIconSize": 180,
+    "WorkerNoCacheHeaders": true,
+    "ApiCache": "no-store",
+    "OfflineNavigationBrowser": "passed with own server stopped",
+    "OfflineContainsReading": false,
+    "OfflineContainsChart": false,
+    "RetryRestoresOfficialReading": true,
+    "NoSSRorRSCCache": true,
+    "CacheLimit": 64,
+    "NoNotifications": true,
+    "NativeOSInstallation": "not performed; HTTPS/native browser install available after deployment"
+  },
+  "Git": {
+    "Branch": "main",
+    "Remote": "https://github.com/JuanHeis/isla-puente.git",
+    "UserInitialCommit": "baf1828",
+    "AgentPush": false,
+    "PublishedByUser": true
+  },
+  "PublishedStatus": {
+    "Url": "https://isla-puente.vercel.app/",
+    "UpstreamError": true,
+    "Diagnosis": "in progress; no invented readings"
+  },
+  "Documentation": {
+    "CanonicalSections": 8,
+    "SourceMatchedColours": 14,
+    "SidecarVersion": 2,
+    "RealComponents": 8,
+    "LinkedCapturesExist": true,
+    "MeasuresMatchSource": true
+  },
+  "IconValidation": {
+    "ICOValid": true,
+    "Sizes": [
+      16,
+      32,
+      48,
+      64
+    ],
+    "ExactColours": true,
+    "Transparent": true,
+    "MaskableSafeZone": true
+  },
+  "OpenGraph": {
+    "Static": true,
+    "Size": [
+      1200,
+      630
+    ],
+    "LiveLevel": false,
+    "PublicBase": "https://isla-puente.vercel.app",
+    "Asset": "public/og-isla-puente.png",
+    "PreviewReviewed": true
+  }
 }

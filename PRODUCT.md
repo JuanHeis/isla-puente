@@ -34,7 +34,7 @@ Fuente oficial: https://contenidosweb.prefecturanaval.gob.ar/alturas/?id=230&pag
 
 Ubicación: https://www.google.com/maps/@-31.7079823,-60.5195607,1095m/data=!3m1!1e3?entry=ttu
 
-Inspección del 13 de octubre de 2026: Prefectura muestra «Último registro: 3.47 Mts el 13/OCT/26 - 1200» y el histórico termina en 3.45 m del mismo día a las 00:00. El gráfico incorpora pares [timestamp, altura] en un script de la página. No se verificó una API JSON pública documentada. La integración tendrá que conservar fecha y procedencia y resolver esta discrepancia.
+Inspección del 13 de octubre de 2026: Prefectura muestra «Último registro: 3.47 Mts el 13/OCT/26 - 1200» y el histórico termina en 3.45 m del mismo día a las 00:00. El gráfico incorpora pares [timestamp, altura] en un script de la página. No se verificó una API JSON pública documentada. La integración conserva fecha y procedencia y agrega la cabecera sólo cuando es una lectura válida posterior.
 
 ## Product Principles
 
@@ -128,4 +128,22 @@ El usuario confirmó la propuesta Shape: toda la app se centra en una columna de
 
 La forma máxima de arena interpreta el contorno rojo del usuario y se une a los dos hombros de la isla. Su rango ilustrativo va de 0,60 m (máximo, saturado para valores menores) a 2,00 m (área cero). El estado a 2,00 m continúa «Casi no hay playa». Sólo cambia el borde de la arena, en 360 ms al crecer y 240 ms al retirarse; las interrupciones retoman el progreso visible y reducción de movimiento aplica el resultado inmediato. La primera arena también se dibuja desde SSR. La forma lleva un borde fino #A79C7A de ancho máximo 3,4 unidades, que disminuye con el progreso y desaparece completamente a 2,00 m. El objeto SVG y los demás nodos permanecen estables.
 
-Desde 4,70 m aparece un mensaje contextual según la referencia de alerta publicada por Prefectura; desde 5,00 m usa la referencia de evacuación. Se verificaron ambas en la estación 230 el 13/10/2026. Alcanzar una altura no acredita una orden o alerta emitida; la simulación lo identifica explícitamente. Estas referencias se usan sólo en el mensaje, sin líneas nuevas en el gráfico. Las 16 ondas acompañan tangentes aproximadas del cauce, y el título conserva su verde oscuro con una textura vectorial de hojas muy suave dentro de los glifos.
+Desde 4,70 m aparece un mensaje contextual según la referencia de alerta publicada por Prefectura; desde 5,00 m usa la referencia de evacuación. Se verificaron ambas en la estación 230 el 13/10/2026. Alcanzar una altura no acredita una orden o alerta emitida; la simulación lo identifica explícitamente. Estas referencias se usan sólo en el mensaje, sin líneas nuevas en el gráfico. Las 16 ondas acompañan tangentes aproximadas del cauce, y el título conserva su verde oscuro con el mismo follaje bitmap de la isla atenuado dentro de los glifos, con descendentes completos.
+
+
+### Referencia personal de playa y gráfico simple
+
+Los 2 m proceden de la experiencia personal del usuario, no de una clasificación publicada por Prefectura. La aclaración visible junto al gráfico reconoce la dinámica fluvial: las corrientes erosionan y depositan arena, por lo que la playa puede variar. La altura de estación, los estados y el mapa ilustrativo no determinan seguridad o profundidad local. El gráfico usa línea sin círculos y mantiene inspección con puntero/tacto/teclado; consultar historia nunca altera el estado actual. Los campos de simulación siguen editables aunque el texto estático no sea seleccionable.
+
+### PWA y preparación de publicación
+
+PWA instalable como «Isla Puente», en modo standalone, con iconos del marcador amarillo/verde, manifiesto raíz e HTTPS en producción. La instalación depende del navegador; no solicita notificaciones ni permisos. Una apertura nueva sin conexión muestra «Sin conexión» y permite reintentar, sin estado de playa, altura o gráfico ficticio. El service worker guarda sólo recursos estáticos y esa pantalla. Las rutas API, HTML SSR y RSC no se almacenan para aparentar actualidad. En una vista abierta que pierde conexión se mantiene el comportamiento de último registro válido y error discreto.
+
+Preparada para importar desde GitHub en Vercel con Node 22.x y Next.js dinámico; sin claves de entorno ni export estático. La caché de Prefectura sigue siendo temporal y propia de cada proceso/instancia; no constituye almacenamiento persistente compartido. La preparación local no publica ni despliega el proyecto.
+
+Fundamento general de erosión y deposición: [USGS, dinámica de sedimentos en barras y llanuras fluviales](https://www.usgs.gov/publications/dynamic-relations-deposition-sediment-floodplains-and-point-bars-a-freely-meandering). Este estudio no establece el umbral personal de Isla Puente.
+
+
+### Vista previa al compartir
+
+OG/Twitter utilizan una imagen estática 1200 × 630 con el nombre y la pregunta «¿Hay playa en la punta?», sin cifras o estado de playa. Se aloja en la app y no consulta Prefectura al renderizar. Canonical y metadataBase usan la URL pública proporcionada por el usuario, https://isla-puente.vercel.app.

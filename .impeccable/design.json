@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-13T23:58:22.463Z",
+  "generatedAt": "2026-10-14T00:29:31.302Z",
   "title": "Design System: Isla Puente",
   "extensions": {
     "breakpoints": [
@@ -20,7 +20,7 @@
       },
       "forest": {
         "role": "primary",
-        "displayName": "Verde de marca y gráfico"
+        "displayName": "Verde de marca y controles"
       },
       "river": {
         "role": "secondary",
@@ -61,12 +61,16 @@
       "lapachos": {
         "role": "tertiary",
         "displayName": "Rosa suave de lapachos"
+      },
+      "plotLine": {
+        "role": "primary",
+        "displayName": "Verde de la curva del río"
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Estado grande",
-        "purpose": "Los cinco estados de playa; textura de hojas sólo aquí."
+        "purpose": "Cinco estados con el mismo follaje bitmap de la isla, tinta oscura y espacio completo para descendentes."
       },
       "displayMobile": {
         "displayName": "Estado en móvil",
@@ -112,7 +116,7 @@
       "kind": "custom",
       "description": "La respuesta principal, con el display aprobado.",
       "html": "<div class=\"ds-status\">No hay playa</div>",
-      "css": ".ds-status{font-family:ArchivoBlack,sans-serif;font-size:clamp(46px,9.8cqw,132px);font-weight:400;line-height:1.02;letter-spacing:-.035em;text-wrap:balance;color:var(--ink)}"
+      "css": ".ds-status{font-family:ArchivoBlack,sans-serif;font-size:clamp(46px,9.8cqw,132px);font-weight:400;line-height:1.02;letter-spacing:-.035em;text-wrap:balance;color:var(--ink);padding-bottom:.16em;margin-bottom:calc(12px - .16em);transform:translateX(-.045em);background-color:var(--ink);background-image:linear-gradient(rgba(41,54,43,.58),rgba(41,54,43,.58)),url(\"/map/title-forest.png\");background-size:auto,300px 150px;background-repeat:no-repeat,repeat;background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent}@media(forced-colors:active){.ds-status{background:none;color:CanvasText;-webkit-text-fill-color:CanvasText}}"
     },
     {
       "name": "Recuperación de datos",
@@ -142,7 +146,7 @@
       "refersTo": "decimal-input",
       "description": "Campo decimal plano; acepta coma o punto en la app.",
       "html": "<label class=\"ds-field\">Altura simulada <input type=\"text\" inputmode=\"decimal\" value=\"1,40\" aria-label=\"Altura simulada\"> m</label>",
-      "css": ".ds-field{display:flex;align-items:center;gap:12px;font-family:Archivo,sans-serif;font-size:15px;font-weight:700;color:#52614F}.ds-field input{width:74px;min-height:44px;padding:8px 6px;border:0;border-bottom:1px solid #7B866E;border-radius:0;background:transparent;color:var(--ink);font-size:17px;font-weight:800;font-variant-numeric:tabular-nums;text-align:right}.ds-field input:focus-visible{outline:2px solid var(--ink);outline-offset:5px}"
+      "css": ".ds-field{display:flex;align-items:center;gap:12px;font-family:Archivo,sans-serif;font-size:15px;font-weight:700;color:#52614F}.ds-field input{width:74px;min-height:44px;padding:8px 6px;border:0;border-bottom:1px solid #7B866E;border-radius:0;background:transparent;color:var(--ink);font-size:17px;font-weight:800;font-variant-numeric:tabular-nums;text-align:right}.ds-field input:focus-visible{outline:2px solid var(--ink);outline-offset:5px}.ds-field input{-webkit-user-select:text;user-select:text}"
     },
     {
       "name": "Deslizador de simulación",

@@ -4,11 +4,13 @@ export const REFRESH_MS = 10 * 60 * 1000;
 export const OLD_READING_MS = 24 * 60 * 60 * 1000;
 
 export type Reading = { timestamp: number; level: number };
+export type SourceIssue = { kind: "timeout" | "transport" | "http" | "format" | "data"; code: string; elapsedMs: number; region?: string };
 export type RiverReport = {
   current: Reading | null;
   history: Reading[];
   fetchedAt: number | null;
   error: string | null;
+  sourceIssue?: SourceIssue | null;
 };
 
 export function beachState(level: number) {

@@ -1,0 +1,17 @@
+{
+  "assetStatus": 200,
+  "assetMime": "image/png",
+  "pngSize": [
+    1200,
+    630
+  ],
+  "openGraph": "https://isla-puente.vercel.app/og-isla-puente.png",
+  "twitterCard": "summary_large_image",
+  "canonical": "https://isla-puente.vercel.app/",
+  "liveReadingInOG": false,
+  "current": {
+    "timestamp": 1791903600000,
+    "level": 3.47
+  },
+  "samples": 60
+}

@@ -5,7 +5,7 @@
       "expected": "Casi no hay playa",
       "official": "Último registro: 3,47 m · 13 de oct de 2026, 12:00 · Paraná",
       "overflow": false,
-      "sandVisible": true,
+      "sandVisible": false,
       "shown": "Casi no hay playa",
       "titleFits": true,
       "value": "2,00"
@@ -58,5 +58,6 @@
   "desktopAppWidth": 900,
   "desktopMapHeight": 490,
   "mobileNoOverflow": true,
-  "longMobileTitleFits": true
+  "longMobileTitleFits": true,
+  "note": "La ronda final confirma cinco estados; arena y borde llegan a cero a 2 m. Registro e historial permanecen oficiales."
 }
