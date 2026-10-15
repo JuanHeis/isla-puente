@@ -52,7 +52,10 @@ export function RiverChart({ readings }: { readings: Reading[] }) {
           <path d="M34 12V153H984" fill="none" stroke="#3B4938" strokeWidth="1.6" vectorEffect="non-scaling-stroke" />
           <path d={`M34 ${y(2)}H984`} fill="none" stroke="#91917D" strokeWidth="1.8" strokeDasharray="12 8" vectorEffect="non-scaling-stroke" />
           <path d={path} fill="none" stroke="#506344" strokeWidth="3" vectorEffect="non-scaling-stroke" />
-          {selected !== null && <path d={`M${x(active)} 15V153`} stroke="#506344" strokeWidth="1" strokeDasharray="3 5" opacity=".5" vectorEffect="non-scaling-stroke" />}
+          {selected !== null && <g pointerEvents="none">
+            <path d={`M${x(active)} 15V153`} stroke="#506344" strokeWidth="1" strokeDasharray="3 5" opacity=".5" vectorEffect="non-scaling-stroke" />
+            <path d={`M${x(active)} ${y(active.level)}h0`} stroke="#506344" strokeWidth="8" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
+          </g>}
           <g stroke="#6A765B" strokeWidth="1.5" vectorEffect="non-scaling-stroke">{labelReadings.map((reading, index) => <path key={index} d={`M${x(reading)} 153v7`} />)}</g>
         </svg>
         <div className="chart-dates" aria-hidden="true">{labelReadings.map((reading, index) => <span key={index}>{formatDate(reading.timestamp, false)}</span>)}</div>

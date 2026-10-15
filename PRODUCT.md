@@ -133,7 +133,7 @@ Desde 4,70 m aparece un mensaje contextual según la referencia de alerta public
 
 ### Referencia personal de playa y gráfico simple
 
-Los 2 m proceden de la experiencia personal del usuario, no de una clasificación publicada por Prefectura. La aclaración visible junto al gráfico reconoce la dinámica fluvial: las corrientes erosionan y depositan arena, por lo que la playa puede variar. La altura de estación, los estados y el mapa ilustrativo no determinan seguridad o profundidad local. El gráfico usa línea sin círculos y mantiene inspección con puntero/tacto/teclado; consultar historia nunca altera el estado actual. Los campos de simulación siguen editables aunque el texto estático no sea seleccionable.
+Los 2 m proceden de la experiencia personal del usuario, no de una clasificación publicada por Prefectura. La aclaración visible junto al gráfico reconoce la dinámica fluvial: las corrientes erosionan y depositan arena, por lo que la playa puede variar. La altura de estación, los estados y el mapa ilustrativo no determinan seguridad o profundidad local. El gráfico usa línea sin puntos permanentes y mantiene inspección con puntero/tacto/teclado; por pedido del usuario del 14 de octubre de 2026, un punto destaca únicamente la lectura consultada junto a la guía vertical. Consultar historia nunca altera el estado actual. Los campos de simulación siguen editables aunque el texto estático no sea seleccionable.
 
 ### PWA y preparación de publicación
 

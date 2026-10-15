@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-15",
+  "engine": "GSAP",
+  "ripples": 16,
+  "motion": "Right-to-left drift of 48–72 SVG units over 18–22 seconds, with 3-second fades and invisible reset. Broad arcs flatten and rise together between 65% and 105% of their original amplitude over 8–12 seconds; endpoints stay anchored and no travelling wiggle is applied.",
+  "checked": [
+    "all sixteen waves travel left",
+    "coherent curve swell without inversion or travelling wiggles",
+    "anchored curve endpoints",
+    "invisible loop reset",
+    "mobile movement",
+    "unchanged island paths",
+    "offscreen pause and resume of drift and curves",
+    "live reduced-motion changes",
+    "original rotations and curves restored",
+    "no horizontal overflow",
+    "no browser errors"
+  ],
+  "screenshots": [
+    "river-motion-desktop.png",
+    "river-motion-mobile.png"
+  ],
+  "readings": "Screenshots contain runtime readings only; no fixtures injected."
+}
